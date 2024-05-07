@@ -1,0 +1,1075 @@
+{
+    "add_basic_authentication": true,
+    "add_offline": true,
+    "add_to_header": true,
+    "auth": "oauth2_user",
+    "authentication_url": "https://accounts.spotify.com/authorize",
+    "calls": {
+        "AAC": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference/search",
+            "initialized": true,
+            "method": "get",
+            "name": "Search",
+            "params": {
+                "AAD": {
+                    "doc": "q is the value to search (eg. track name, artist)",
+                    "key": "q",
+                    "optional": false,
+                    "private": true,
+                    "value": "rewrite the stars"
+                },
+                "AAE": {
+                    "doc": "Search type. Valid types are: album , artist, playlist, track, show and episode",
+                    "key": "type",
+                    "private": true,
+                    "value": "track"
+                },
+                "AAF": {
+                    "doc": "If a country code is specified, only content that is playable in that market is returned.",
+                    "key": "market",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AAG": {
+                    "doc": "Maximum number of results to return.\nDefault: 20\nMinimum: 1\nMaximum: 50",
+                    "key": "limit",
+                    "private": true,
+                    "value": "20"
+                }
+            },
+            "publish_as": "data",
+            "rank": 0,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAC",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAC\":{\"caption\":\"Search\",\"fields\":{\"_p_tracks.href\":{\"ret_value\":\"text\",\"caption\":\"tracks href\",\"sample_value\":\"https://api.spotify.com/v1/search?query=rewrite+the+stars&type=track&offset=0&limit=20\",\"path\":[\"tracks\",\"href\"]},\"_p_tracks.items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAC.tracks.items\",\"caption\":\"tracks\",\"path\":[\"tracks\",\"items\"]},\"_p_tracks.limit\":{\"ret_value\":\"number\",\"caption\":\"tracks limit\",\"sample_value\":20,\"path\":[\"tracks\",\"limit\"]},\"_p_tracks.next\":{\"ret_value\":\"text\",\"caption\":\"tracks next\",\"sample_value\":\"https://api.spotify.com/v1/search?query=rewrite+the+stars&type=track&offset=20&limit=20\",\"path\":[\"tracks\",\"next\"]},\"_p_tracks.offset\":{\"ret_value\":\"number\",\"caption\":\"tracks offset\",\"sample_value\":0,\"path\":[\"tracks\",\"offset\"]},\"_p_tracks.previous\":{\"ret_value\":\"text\",\"caption\":\"tracks previous\",\"sample_value\":null,\"path\":[\"tracks\",\"previous\"]},\"_p_tracks.total\":{\"ret_value\":\"number\",\"caption\":\"tracks total\",\"sample_value\":791,\"path\":[\"tracks\",\"total\"]}}},\"plugin_api.AAC.tracks.items\":{\"caption\":\"Search tracks item\",\"fields\":{\"_p_album.album_type\":{\"ret_value\":\"text\",\"caption\":\"album album_type\",\"sample_value\":\"compilation\",\"path\":[\"album\",\"album_type\"]},\"_p_album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAC.album.artists\",\"caption\":\"album artists\",\"path\":[\"album\",\"artists\"]},\"_p_album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"album available_markets\",\"sample_value\":\"AR\",\"path\":[\"album\",\"available_markets\"]},\"_p_album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/1oqnHxrKI3Gq8MKgAGDtMr\",\"path\":[\"album\",\"external_urls\",\"spotify\"]},\"_p_album.href\":{\"ret_value\":\"text\",\"caption\":\"album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/1oqnHxrKI3Gq8MKgAGDtMr\",\"path\":[\"album\",\"href\"]},\"_p_album.id\":{\"ret_value\":\"text\",\"caption\":\"album id\",\"sample_value\":\"1oqnHxrKI3Gq8MKgAGDtMr\",\"path\":[\"album\",\"id\"]},\"_p_album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAC.album.images\",\"caption\":\"album images\",\"path\":[\"album\",\"images\"]},\"_p_album.name\":{\"ret_value\":\"text\",\"caption\":\"album name\",\"sample_value\":\"The Greatest Showman: Reimagined (Deluxe)\",\"path\":[\"album\",\"name\"]},\"_p_album.release_date\":{\"ret_value\":\"text\",\"caption\":\"album release_date\",\"sample_value\":\"2017-12-08\",\"path\":[\"album\",\"release_date\"]},\"_p_album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"album\",\"release_date_precision\"]},\"_p_album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"album total_tracks\",\"sample_value\":24,\"path\":[\"album\",\"total_tracks\"]},\"_p_album.type\":{\"ret_value\":\"text\",\"caption\":\"album type\",\"sample_value\":\"album\",\"path\":[\"album\",\"type\"]},\"_p_album.uri\":{\"ret_value\":\"text\",\"caption\":\"album uri\",\"sample_value\":\"spotify:album:1oqnHxrKI3Gq8MKgAGDtMr\",\"path\":[\"album\",\"uri\"]},\"_p_artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAC.artists\",\"caption\":\"artists\",\"path\":[\"artists\"]},\"_p_available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"available_markets\",\"sample_value\":\"AR\",\"path\":[\"available_markets\"]},\"_p_disc_number\":{\"ret_value\":\"number\",\"caption\":\"disc_number\",\"sample_value\":1,\"path\":[\"disc_number\"]},\"_p_duration_ms\":{\"ret_value\":\"number\",\"caption\":\"duration_ms\",\"sample_value\":218293,\"path\":[\"duration_ms\"]},\"_p_explicit\":{\"ret_value\":\"boolean\",\"caption\":\"explicit\",\"sample_value\":false,\"path\":[\"explicit\"]},\"_p_external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"external_ids isrc\",\"sample_value\":\"USAT21811541\",\"path\":[\"external_ids\",\"isrc\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/7FlHNJT4TC120CDvFOHzei\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/7FlHNJT4TC120CDvFOHzei\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"7FlHNJT4TC120CDvFOHzei\",\"path\":[\"id\"]},\"_p_is_local\":{\"ret_value\":\"boolean\",\"caption\":\"is_local\",\"sample_value\":false,\"path\":[\"is_local\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Rewrite The Stars\",\"path\":[\"name\"]},\"_p_popularity\":{\"ret_value\":\"number\",\"caption\":\"popularity\",\"sample_value\":77,\"path\":[\"popularity\"]},\"_p_preview_url\":{\"ret_value\":\"text\",\"caption\":\"preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/cf2a0c017f413de261c49290bf41a6d4fe5551d3?cid=8fa373e0a9c144d398c17605ecaa5faa\",\"path\":[\"preview_url\"]},\"_p_track_number\":{\"ret_value\":\"number\",\"caption\":\"track_number\",\"sample_value\":8,\"path\":[\"track_number\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"track\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:track:7FlHNJT4TC120CDvFOHzei\",\"path\":[\"uri\"]}}},\"plugin_api.AAC.album.artists\":{\"caption\":\"Search album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"0LyfQWJT6nXafLPZqxe9Of\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Various Artists\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:0LyfQWJT6nXafLPZqxe9Of\",\"path\":[\"uri\"]}}},\"plugin_api.AAC.album.images\":{\"caption\":\"Search album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b273c4e9d12d9ccdd7e48d2a0329\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.AAC.artists\":{\"caption\":\"Search artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/4IWBUUAFIplrNtaOHcJPRM\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/4IWBUUAFIplrNtaOHcJPRM\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"4IWBUUAFIplrNtaOHcJPRM\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"James Arthur\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:4IWBUUAFIplrNtaOHcJPRM\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/search"
+        },
+        "AAH": {
+            "initialized": true,
+            "method": "get",
+            "name": "Profile",
+            "publish_as": "data",
+            "rank": 1,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAH",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAH\":{\"caption\":\"Profile\",\"fields\":{\"_p_country\":{\"ret_value\":\"text\",\"caption\":\"country\",\"path\":[\"country\"]},\"_p_display_name\":{\"ret_value\":\"text\",\"caption\":\"display_name\",\"path\":[\"display_name\"]},\"_p_email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"path\":[\"email\"]},\"_p_explicit_content.filter_enabled\":{\"ret_value\":\"boolean\",\"caption\":\"explicit_content filter_enabled\",\"path\":[\"explicit_content\",\"filter_enabled\"]},\"_p_explicit_content.filter_locked\":{\"ret_value\":\"boolean\",\"caption\":\"explicit_content filter_locked\",\"path\":[\"explicit_content\",\"filter_locked\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_followers.href\":{\"ret_value\":\"text\",\"caption\":\"followers href\",\"path\":[\"followers\",\"href\"]},\"_p_followers.total\":{\"ret_value\":\"number\",\"caption\":\"followers total\",\"path\":[\"followers\",\"total\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAH.images\",\"caption\":\"images\",\"path\":[\"images\"]},\"_p_product\":{\"ret_value\":\"text\",\"caption\":\"product\",\"path\":[\"product\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}},\"plugin_api.AAH.images\":{\"caption\":\"Profile image\",\"fields\":{\"_p_height\":{\"ret_value\":\"text\",\"caption\":\"height\",\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"text\",\"caption\":\"width\",\"path\":[\"width\"]}}}}",
+            "url": "https://api.spotify.com/v1/me"
+        },
+        "AAI": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#category-tracks",
+            "initialized": true,
+            "method": "get",
+            "name": "Get Track",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAI",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAI\":{\"caption\":\"Get Track\",\"fields\":{\"_p_album.album_type\":{\"ret_value\":\"text\",\"caption\":\"album album_type\",\"path\":[\"album\",\"album_type\"]},\"_p_album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAI.album.artists\",\"caption\":\"album artists\",\"path\":[\"album\",\"artists\"]},\"_p_album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"album available_markets\",\"path\":[\"album\",\"available_markets\"]},\"_p_album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"album external_urls spotify\",\"path\":[\"album\",\"external_urls\",\"spotify\"]},\"_p_album.href\":{\"ret_value\":\"text\",\"caption\":\"album href\",\"path\":[\"album\",\"href\"]},\"_p_album.id\":{\"ret_value\":\"text\",\"caption\":\"album id\",\"path\":[\"album\",\"id\"]},\"_p_album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAI.album.images\",\"caption\":\"album images\",\"path\":[\"album\",\"images\"]},\"_p_album.name\":{\"ret_value\":\"text\",\"caption\":\"album name\",\"path\":[\"album\",\"name\"]},\"_p_album.release_date\":{\"ret_value\":\"text\",\"caption\":\"album release_date\",\"path\":[\"album\",\"release_date\"]},\"_p_album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"album release_date_precision\",\"path\":[\"album\",\"release_date_precision\"]},\"_p_album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"album total_tracks\",\"path\":[\"album\",\"total_tracks\"]},\"_p_album.type\":{\"ret_value\":\"text\",\"caption\":\"album type\",\"path\":[\"album\",\"type\"]},\"_p_album.uri\":{\"ret_value\":\"text\",\"caption\":\"album uri\",\"path\":[\"album\",\"uri\"]},\"_p_artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAI.artists\",\"caption\":\"artists\",\"path\":[\"artists\"]},\"_p_available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"available_markets\",\"path\":[\"available_markets\"]},\"_p_disc_number\":{\"ret_value\":\"number\",\"caption\":\"disc_number\",\"path\":[\"disc_number\"]},\"_p_duration_ms\":{\"ret_value\":\"number\",\"caption\":\"duration_ms\",\"path\":[\"duration_ms\"]},\"_p_explicit\":{\"ret_value\":\"boolean\",\"caption\":\"explicit\",\"path\":[\"explicit\"]},\"_p_external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"external_ids isrc\",\"path\":[\"external_ids\",\"isrc\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_is_local\":{\"ret_value\":\"boolean\",\"caption\":\"is_local\",\"path\":[\"is_local\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_popularity\":{\"ret_value\":\"number\",\"caption\":\"popularity\",\"path\":[\"popularity\"]},\"_p_preview_url\":{\"ret_value\":\"text\",\"caption\":\"preview_url\",\"path\":[\"preview_url\"]},\"_p_track_number\":{\"ret_value\":\"number\",\"caption\":\"track_number\",\"path\":[\"track_number\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}},\"plugin_api.AAI.album.artists\":{\"caption\":\"Get Track album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}},\"plugin_api.AAI.album.images\":{\"caption\":\"Get Track album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"path\":[\"width\"]}}},\"plugin_api.AAI.artists\":{\"caption\":\"Get Track artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/tracks/[id]",
+            "url_params": {
+                "AAK": {
+                    "key": "id",
+                    "private": true,
+                    "value": "6J6FXmYrMxg93mBxkugUlI"
+                }
+            }
+        },
+        "AAL": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-a-users-available-devices",
+            "initialized": true,
+            "method": "get",
+            "name": "Get Devices",
+            "publish_as": "data",
+            "rank": 4,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAL",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAL\":{\"caption\":\"Get Device\",\"fields\":{\"_p_devices\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAL.devices\",\"caption\":\"devices\",\"path\":[\"devices\"]}}},\"plugin_api.AAL.devices\":{\"caption\":\"Get Devices device\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"881b476f4f38cc9e702fb45499c18df163d97c21\",\"path\":[\"id\"]},\"_p_is_active\":{\"ret_value\":\"boolean\",\"caption\":\"is_active\",\"sample_value\":false,\"path\":[\"is_active\"]},\"_p_is_private_session\":{\"ret_value\":\"boolean\",\"caption\":\"is_private_session\",\"sample_value\":false,\"path\":[\"is_private_session\"]},\"_p_is_restricted\":{\"ret_value\":\"boolean\",\"caption\":\"is_restricted\",\"sample_value\":false,\"path\":[\"is_restricted\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Web Player (Chrome)\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"Computer\",\"path\":[\"type\"]},\"_p_volume_percent\":{\"ret_value\":\"number\",\"caption\":\"volume_percent\",\"sample_value\":100,\"path\":[\"volume_percent\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/player/devices"
+        },
+        "AAN": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-information-about-the-users-current-playback",
+            "initialized": true,
+            "method": "get",
+            "name": "Current Playback",
+            "publish_as": "data",
+            "rank": 6,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAN",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAN\":{\"caption\":\"Current Playback\",\"fields\":{\"_p_device.id\":{\"ret_value\":\"text\",\"caption\":\"device id\",\"sample_value\":null,\"path\":[\"device\",\"id\"]},\"_p_device.is_active\":{\"ret_value\":\"boolean\",\"caption\":\"device is_active\",\"sample_value\":true,\"path\":[\"device\",\"is_active\"]},\"_p_device.is_private_session\":{\"ret_value\":\"boolean\",\"caption\":\"device is_private_session\",\"sample_value\":false,\"path\":[\"device\",\"is_private_session\"]},\"_p_device.is_restricted\":{\"ret_value\":\"boolean\",\"caption\":\"device is_restricted\",\"sample_value\":true,\"path\":[\"device\",\"is_restricted\"]},\"_p_device.name\":{\"ret_value\":\"text\",\"caption\":\"device name\",\"sample_value\":\"Salon + 2\",\"path\":[\"device\",\"name\"]},\"_p_device.type\":{\"ret_value\":\"text\",\"caption\":\"device type\",\"sample_value\":\"Speaker\",\"path\":[\"device\",\"type\"]},\"_p_device.volume_percent\":{\"ret_value\":\"number\",\"caption\":\"device volume_percent\",\"sample_value\":20,\"path\":[\"device\",\"volume_percent\"]},\"_p_shuffle_state\":{\"ret_value\":\"boolean\",\"caption\":\"shuffle_state\",\"sample_value\":false,\"path\":[\"shuffle_state\"]},\"_p_repeat_state\":{\"ret_value\":\"text\",\"caption\":\"repeat_state\",\"sample_value\":\"off\",\"path\":[\"repeat_state\"]},\"_p_timestamp\":{\"ret_value\":\"date_unix\",\"caption\":\"timestamp\",\"sample_value\":1616917633869,\"path\":[\"timestamp\"]},\"_p_context.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"context external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"external_urls\",\"spotify\"]},\"_p_context.href\":{\"ret_value\":\"text\",\"caption\":\"context href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"href\"]},\"_p_context.type\":{\"ret_value\":\"text\",\"caption\":\"context type\",\"sample_value\":\"playlist\",\"path\":[\"context\",\"type\"]},\"_p_context.uri\":{\"ret_value\":\"text\",\"caption\":\"context uri\",\"sample_value\":\"spotify:playlist:48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"uri\"]},\"_p_progress_ms\":{\"ret_value\":\"number\",\"caption\":\"progress_ms\",\"sample_value\":87071,\"path\":[\"progress_ms\"]},\"_p_item.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"item album album_type\",\"sample_value\":\"single\",\"path\":[\"item\",\"album\",\"album_type\"]},\"_p_item.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAN.item.album.artists\",\"caption\":\"item album artists\",\"path\":[\"item\",\"album\",\"artists\"]},\"_p_item.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"item album available_markets\",\"sample_value\":\"AD\",\"path\":[\"item\",\"album\",\"available_markets\"]},\"_p_item.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"item album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"external_urls\",\"spotify\"]},\"_p_item.album.href\":{\"ret_value\":\"text\",\"caption\":\"item album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"href\"]},\"_p_item.album.id\":{\"ret_value\":\"text\",\"caption\":\"item album id\",\"sample_value\":\"4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"id\"]},\"_p_item.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAN.item.album.images\",\"caption\":\"item album images\",\"path\":[\"item\",\"album\",\"images\"]},\"_p_item.album.name\":{\"ret_value\":\"text\",\"caption\":\"item album name\",\"sample_value\":\"Lo Vas A Olvidar (with ROSALÍA)\",\"path\":[\"item\",\"album\",\"name\"]},\"_p_item.album.release_date\":{\"ret_value\":\"text\",\"caption\":\"item album release_date\",\"sample_value\":\"2021-01-21\",\"path\":[\"item\",\"album\",\"release_date\"]},\"_p_item.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"item album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"item\",\"album\",\"release_date_precision\"]},\"_p_item.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"item album total_tracks\",\"sample_value\":1,\"path\":[\"item\",\"album\",\"total_tracks\"]},\"_p_item.album.type\":{\"ret_value\":\"text\",\"caption\":\"item album type\",\"sample_value\":\"album\",\"path\":[\"item\",\"album\",\"type\"]},\"_p_item.album.uri\":{\"ret_value\":\"text\",\"caption\":\"item album uri\",\"sample_value\":\"spotify:album:4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"uri\"]},\"_p_item.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAN.item.artists\",\"caption\":\"item artists\",\"path\":[\"item\",\"artists\"]},\"_p_item.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"item available_markets\",\"sample_value\":\"AD\",\"path\":[\"item\",\"available_markets\"]},\"_p_item.disc_number\":{\"ret_value\":\"number\",\"caption\":\"item disc_number\",\"sample_value\":1,\"path\":[\"item\",\"disc_number\"]},\"_p_item.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"item duration_ms\",\"sample_value\":203464,\"path\":[\"item\",\"duration_ms\"]},\"_p_item.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"item explicit\",\"sample_value\":false,\"path\":[\"item\",\"explicit\"]},\"_p_item.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"item external_ids isrc\",\"sample_value\":\"USUM72100008\",\"path\":[\"item\",\"external_ids\",\"isrc\"]},\"_p_item.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"item external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"external_urls\",\"spotify\"]},\"_p_item.href\":{\"ret_value\":\"text\",\"caption\":\"item href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"href\"]},\"_p_item.id\":{\"ret_value\":\"text\",\"caption\":\"item id\",\"sample_value\":\"0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"id\"]},\"_p_item.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"item is_local\",\"sample_value\":false,\"path\":[\"item\",\"is_local\"]},\"_p_item.name\":{\"ret_value\":\"text\",\"caption\":\"item name\",\"sample_value\":\"Lo Vas A Olvidar (with ROSALÍA)\",\"path\":[\"item\",\"name\"]},\"_p_item.popularity\":{\"ret_value\":\"number\",\"caption\":\"item popularity\",\"sample_value\":79,\"path\":[\"item\",\"popularity\"]},\"_p_item.preview_url\":{\"ret_value\":\"text\",\"caption\":\"item preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/414ee1d2591f99872a5acb36065c14e05a3b870e?cid=9a524b121201476d9fcc60ba8838dc09\",\"path\":[\"item\",\"preview_url\"]},\"_p_item.track_number\":{\"ret_value\":\"number\",\"caption\":\"item track_number\",\"sample_value\":1,\"path\":[\"item\",\"track_number\"]},\"_p_item.type\":{\"ret_value\":\"text\",\"caption\":\"item type\",\"sample_value\":\"track\",\"path\":[\"item\",\"type\"]},\"_p_item.uri\":{\"ret_value\":\"text\",\"caption\":\"item uri\",\"sample_value\":\"spotify:track:0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"uri\"]},\"_p_currently_playing_type\":{\"ret_value\":\"text\",\"caption\":\"currently_playing_type\",\"sample_value\":\"track\",\"path\":[\"currently_playing_type\"]},\"_p_actions.disallows.resuming\":{\"ret_value\":\"boolean\",\"caption\":\"actions disallows resuming\",\"sample_value\":true,\"path\":[\"actions\",\"disallows\",\"resuming\"]},\"_p_actions.disallows.skipping_prev\":{\"ret_value\":\"boolean\",\"caption\":\"actions disallows skipping_prev\",\"sample_value\":true,\"path\":[\"actions\",\"disallows\",\"skipping_prev\"]},\"_p_is_playing\":{\"ret_value\":\"boolean\",\"caption\":\"is_playing\",\"sample_value\":true,\"path\":[\"is_playing\"]}}},\"plugin_api.AAN.item.album.artists\":{\"caption\":\"Current Playback item album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Billie Eilish\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"uri\"]}}},\"plugin_api.AAN.item.album.images\":{\"caption\":\"Current Playback item album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b273c64ed7bab63186d7fca3012f\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.AAN.item.artists\":{\"caption\":\"Current Playback item artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Billie Eilish\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/player"
+        },
+        "AAO": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-recently-played",
+            "initialized": true,
+            "method": "get",
+            "name": "Recent Played",
+            "params": {
+                "AAP": {
+                    "doc": "The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
+                    "key": "limit",
+                    "private": true,
+                    "value": "20"
+                }
+            },
+            "publish_as": "data",
+            "rank": 5,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAO",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAO\":{\"caption\":\"Recent Played\",\"fields\":{\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAO.items\",\"caption\":\"items\",\"path\":[\"items\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"path\":[\"next\"]},\"_p_cursors.after\":{\"ret_value\":\"text\",\"caption\":\"cursors after\",\"path\":[\"cursors\",\"after\"]},\"_p_cursors.before\":{\"ret_value\":\"text\",\"caption\":\"cursors before\",\"path\":[\"cursors\",\"before\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"path\":[\"limit\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]}}},\"plugin_api.AAO.items\":{\"caption\":\"Recent Played item\",\"fields\":{\"_p_track.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"track album album_type\",\"path\":[\"track\",\"album\",\"album_type\"]},\"_p_track.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAO.track.album.artists\",\"caption\":\"track album artists\",\"path\":[\"track\",\"album\",\"artists\"]},\"_p_track.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track album available_markets\",\"path\":[\"track\",\"album\",\"available_markets\"]},\"_p_track.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track album external_urls spotify\",\"path\":[\"track\",\"album\",\"external_urls\",\"spotify\"]},\"_p_track.album.href\":{\"ret_value\":\"text\",\"caption\":\"track album href\",\"path\":[\"track\",\"album\",\"href\"]},\"_p_track.album.id\":{\"ret_value\":\"text\",\"caption\":\"track album id\",\"path\":[\"track\",\"album\",\"id\"]},\"_p_track.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAO.track.album.images\",\"caption\":\"track album images\",\"path\":[\"track\",\"album\",\"images\"]},\"_p_track.album.name\":{\"ret_value\":\"text\",\"caption\":\"track album name\",\"path\":[\"track\",\"album\",\"name\"]},\"_p_track.album.release_date\":{\"ret_value\":\"text\",\"caption\":\"track album release_date\",\"path\":[\"track\",\"album\",\"release_date\"]},\"_p_track.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"track album release_date_precision\",\"path\":[\"track\",\"album\",\"release_date_precision\"]},\"_p_track.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"track album total_tracks\",\"path\":[\"track\",\"album\",\"total_tracks\"]},\"_p_track.album.type\":{\"ret_value\":\"text\",\"caption\":\"track album type\",\"path\":[\"track\",\"album\",\"type\"]},\"_p_track.album.uri\":{\"ret_value\":\"text\",\"caption\":\"track album uri\",\"path\":[\"track\",\"album\",\"uri\"]},\"_p_track.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAO.track.artists\",\"caption\":\"track artists\",\"path\":[\"track\",\"artists\"]},\"_p_track.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track available_markets\",\"path\":[\"track\",\"available_markets\"]},\"_p_track.disc_number\":{\"ret_value\":\"number\",\"caption\":\"track disc_number\",\"path\":[\"track\",\"disc_number\"]},\"_p_track.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"track duration_ms\",\"path\":[\"track\",\"duration_ms\"]},\"_p_track.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"track explicit\",\"path\":[\"track\",\"explicit\"]},\"_p_track.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"track external_ids isrc\",\"path\":[\"track\",\"external_ids\",\"isrc\"]},\"_p_track.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track external_urls spotify\",\"path\":[\"track\",\"external_urls\",\"spotify\"]},\"_p_track.href\":{\"ret_value\":\"text\",\"caption\":\"track href\",\"path\":[\"track\",\"href\"]},\"_p_track.id\":{\"ret_value\":\"text\",\"caption\":\"track id\",\"path\":[\"track\",\"id\"]},\"_p_track.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"track is_local\",\"path\":[\"track\",\"is_local\"]},\"_p_track.name\":{\"ret_value\":\"text\",\"caption\":\"track name\",\"path\":[\"track\",\"name\"]},\"_p_track.popularity\":{\"ret_value\":\"number\",\"caption\":\"track popularity\",\"path\":[\"track\",\"popularity\"]},\"_p_track.preview_url\":{\"ret_value\":\"text\",\"caption\":\"track preview_url\",\"path\":[\"track\",\"preview_url\"]},\"_p_track.track_number\":{\"ret_value\":\"number\",\"caption\":\"track track_number\",\"path\":[\"track\",\"track_number\"]},\"_p_track.type\":{\"ret_value\":\"text\",\"caption\":\"track type\",\"path\":[\"track\",\"type\"]},\"_p_track.uri\":{\"ret_value\":\"text\",\"caption\":\"track uri\",\"path\":[\"track\",\"uri\"]},\"_p_played_at\":{\"ret_value\":\"text\",\"caption\":\"played_at\",\"path\":[\"played_at\"]},\"_p_context\":{\"ret_value\":\"text\",\"caption\":\"context\",\"path\":[\"context\"]}}},\"plugin_api.AAO.track.album.artists\":{\"caption\":\"Recent Played track album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}},\"plugin_api.AAO.track.album.images\":{\"caption\":\"Recent Played track album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"path\":[\"width\"]}}},\"plugin_api.AAO.track.artists\":{\"caption\":\"Recent Played track artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/player/recently-played"
+        },
+        "AAQ": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-the-users-currently-playing-track",
+            "initialized": true,
+            "method": "get",
+            "name": "Currently Played",
+            "publish_as": "data",
+            "rank": 8,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAQ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAQ\":{\"caption\":\"Currently Played\",\"fields\":{\"_p_timestamp\":{\"ret_value\":\"date_unix\",\"caption\":\"timestamp\",\"sample_value\":1616917600957,\"path\":[\"timestamp\"]},\"_p_context.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"context external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"external_urls\",\"spotify\"]},\"_p_context.href\":{\"ret_value\":\"text\",\"caption\":\"context href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"href\"]},\"_p_context.type\":{\"ret_value\":\"text\",\"caption\":\"context type\",\"sample_value\":\"playlist\",\"path\":[\"context\",\"type\"]},\"_p_context.uri\":{\"ret_value\":\"text\",\"caption\":\"context uri\",\"sample_value\":\"spotify:playlist:48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"uri\"]},\"_p_progress_ms\":{\"ret_value\":\"number\",\"caption\":\"progress_ms\",\"sample_value\":44620,\"path\":[\"progress_ms\"]},\"_p_item.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"item album album_type\",\"sample_value\":\"single\",\"path\":[\"item\",\"album\",\"album_type\"]},\"_p_item.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAQ.item.album.artists\",\"caption\":\"item album artists\",\"path\":[\"item\",\"album\",\"artists\"]},\"_p_item.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"item album available_markets\",\"sample_value\":\"AD\",\"path\":[\"item\",\"album\",\"available_markets\"]},\"_p_item.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"item album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"external_urls\",\"spotify\"]},\"_p_item.album.href\":{\"ret_value\":\"text\",\"caption\":\"item album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"href\"]},\"_p_item.album.id\":{\"ret_value\":\"text\",\"caption\":\"item album id\",\"sample_value\":\"4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"id\"]},\"_p_item.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAQ.item.album.images\",\"caption\":\"item album images\",\"path\":[\"item\",\"album\",\"images\"]},\"_p_item.album.name\":{\"ret_value\":\"text\",\"caption\":\"item album name\",\"sample_value\":\"Lo Vas A Olvidar (with ROSALÍA)\",\"path\":[\"item\",\"album\",\"name\"]},\"_p_item.album.release_date\":{\"ret_value\":\"text\",\"caption\":\"item album release_date\",\"sample_value\":\"2021-01-21\",\"path\":[\"item\",\"album\",\"release_date\"]},\"_p_item.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"item album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"item\",\"album\",\"release_date_precision\"]},\"_p_item.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"item album total_tracks\",\"sample_value\":1,\"path\":[\"item\",\"album\",\"total_tracks\"]},\"_p_item.album.type\":{\"ret_value\":\"text\",\"caption\":\"item album type\",\"sample_value\":\"album\",\"path\":[\"item\",\"album\",\"type\"]},\"_p_item.album.uri\":{\"ret_value\":\"text\",\"caption\":\"item album uri\",\"sample_value\":\"spotify:album:4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"uri\"]},\"_p_item.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAQ.item.artists\",\"caption\":\"item artists\",\"path\":[\"item\",\"artists\"]},\"_p_item.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"item available_markets\",\"sample_value\":\"AD\",\"path\":[\"item\",\"available_markets\"]},\"_p_item.disc_number\":{\"ret_value\":\"number\",\"caption\":\"item disc_number\",\"sample_value\":1,\"path\":[\"item\",\"disc_number\"]},\"_p_item.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"item duration_ms\",\"sample_value\":203464,\"path\":[\"item\",\"duration_ms\"]},\"_p_item.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"item explicit\",\"sample_value\":false,\"path\":[\"item\",\"explicit\"]},\"_p_item.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"item external_ids isrc\",\"sample_value\":\"USUM72100008\",\"path\":[\"item\",\"external_ids\",\"isrc\"]},\"_p_item.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"item external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"external_urls\",\"spotify\"]},\"_p_item.href\":{\"ret_value\":\"text\",\"caption\":\"item href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"href\"]},\"_p_item.id\":{\"ret_value\":\"text\",\"caption\":\"item id\",\"sample_value\":\"0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"id\"]},\"_p_item.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"item is_local\",\"sample_value\":false,\"path\":[\"item\",\"is_local\"]},\"_p_item.name\":{\"ret_value\":\"text\",\"caption\":\"item name\",\"sample_value\":\"Lo Vas A Olvidar (with ROSALÍA)\",\"path\":[\"item\",\"name\"]},\"_p_item.popularity\":{\"ret_value\":\"number\",\"caption\":\"item popularity\",\"sample_value\":79,\"path\":[\"item\",\"popularity\"]},\"_p_item.preview_url\":{\"ret_value\":\"text\",\"caption\":\"item preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/414ee1d2591f99872a5acb36065c14e05a3b870e?cid=9a524b121201476d9fcc60ba8838dc09\",\"path\":[\"item\",\"preview_url\"]},\"_p_item.track_number\":{\"ret_value\":\"number\",\"caption\":\"item track_number\",\"sample_value\":1,\"path\":[\"item\",\"track_number\"]},\"_p_item.type\":{\"ret_value\":\"text\",\"caption\":\"item type\",\"sample_value\":\"track\",\"path\":[\"item\",\"type\"]},\"_p_item.uri\":{\"ret_value\":\"text\",\"caption\":\"item uri\",\"sample_value\":\"spotify:track:0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"uri\"]},\"_p_currently_playing_type\":{\"ret_value\":\"text\",\"caption\":\"currently_playing_type\",\"sample_value\":\"track\",\"path\":[\"currently_playing_type\"]},\"_p_actions.disallows.resuming\":{\"ret_value\":\"boolean\",\"caption\":\"actions disallows resuming\",\"sample_value\":true,\"path\":[\"actions\",\"disallows\",\"resuming\"]},\"_p_actions.disallows.skipping_prev\":{\"ret_value\":\"boolean\",\"caption\":\"actions disallows skipping_prev\",\"sample_value\":true,\"path\":[\"actions\",\"disallows\",\"skipping_prev\"]},\"_p_is_playing\":{\"ret_value\":\"boolean\",\"caption\":\"is_playing\",\"sample_value\":true,\"path\":[\"is_playing\"]}}},\"plugin_api.AAQ.item.album.artists\":{\"caption\":\"Currently Played item album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Billie Eilish\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"uri\"]}}},\"plugin_api.AAQ.item.album.images\":{\"caption\":\"Currently Played item album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b273c64ed7bab63186d7fca3012f\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.AAQ.item.artists\":{\"caption\":\"Currently Played item artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Billie Eilish\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/player/currently-playing"
+        },
+        "AAR": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-users-saved-tracks",
+            "initialized": true,
+            "method": "get",
+            "name": "Liked tracks",
+            "params": {
+                "AAS": {
+                    "doc": "The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.",
+                    "key": "limit",
+                    "private": true,
+                    "value": "20"
+                }
+            },
+            "publish_as": "data",
+            "rank": 9,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAR",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAR\":{\"caption\":\"Liked track\",\"fields\":{\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAR.items\",\"caption\":\"items\",\"path\":[\"items\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"path\":[\"limit\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"path\":[\"next\"]},\"_p_offset\":{\"ret_value\":\"number\",\"caption\":\"offset\",\"path\":[\"offset\"]},\"_p_previous\":{\"ret_value\":\"text\",\"caption\":\"previous\",\"path\":[\"previous\"]},\"_p_total\":{\"ret_value\":\"number\",\"caption\":\"total\",\"path\":[\"total\"]}}},\"plugin_api.AAR.items\":{\"caption\":\"Liked tracks item\",\"fields\":{\"_p_added_at\":{\"ret_value\":\"text\",\"caption\":\"added_at\",\"path\":[\"added_at\"]},\"_p_track.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"track album album_type\",\"path\":[\"track\",\"album\",\"album_type\"]},\"_p_track.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAR.track.album.artists\",\"caption\":\"track album artists\",\"path\":[\"track\",\"album\",\"artists\"]},\"_p_track.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track album available_markets\",\"path\":[\"track\",\"album\",\"available_markets\"]},\"_p_track.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track album external_urls spotify\",\"path\":[\"track\",\"album\",\"external_urls\",\"spotify\"]},\"_p_track.album.href\":{\"ret_value\":\"text\",\"caption\":\"track album href\",\"path\":[\"track\",\"album\",\"href\"]},\"_p_track.album.id\":{\"ret_value\":\"text\",\"caption\":\"track album id\",\"path\":[\"track\",\"album\",\"id\"]},\"_p_track.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAR.track.album.images\",\"caption\":\"track album images\",\"path\":[\"track\",\"album\",\"images\"]},\"_p_track.album.name\":{\"ret_value\":\"text\",\"caption\":\"track album name\",\"path\":[\"track\",\"album\",\"name\"]},\"_p_track.album.release_date\":{\"ret_value\":\"text\",\"caption\":\"track album release_date\",\"path\":[\"track\",\"album\",\"release_date\"]},\"_p_track.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"track album release_date_precision\",\"path\":[\"track\",\"album\",\"release_date_precision\"]},\"_p_track.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"track album total_tracks\",\"path\":[\"track\",\"album\",\"total_tracks\"]},\"_p_track.album.type\":{\"ret_value\":\"text\",\"caption\":\"track album type\",\"path\":[\"track\",\"album\",\"type\"]},\"_p_track.album.uri\":{\"ret_value\":\"text\",\"caption\":\"track album uri\",\"path\":[\"track\",\"album\",\"uri\"]},\"_p_track.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAR.track.artists\",\"caption\":\"track artists\",\"path\":[\"track\",\"artists\"]},\"_p_track.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track available_markets\",\"path\":[\"track\",\"available_markets\"]},\"_p_track.disc_number\":{\"ret_value\":\"number\",\"caption\":\"track disc_number\",\"path\":[\"track\",\"disc_number\"]},\"_p_track.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"track duration_ms\",\"path\":[\"track\",\"duration_ms\"]},\"_p_track.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"track explicit\",\"path\":[\"track\",\"explicit\"]},\"_p_track.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"track external_ids isrc\",\"path\":[\"track\",\"external_ids\",\"isrc\"]},\"_p_track.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track external_urls spotify\",\"path\":[\"track\",\"external_urls\",\"spotify\"]},\"_p_track.href\":{\"ret_value\":\"text\",\"caption\":\"track href\",\"path\":[\"track\",\"href\"]},\"_p_track.id\":{\"ret_value\":\"text\",\"caption\":\"track id\",\"path\":[\"track\",\"id\"]},\"_p_track.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"track is_local\",\"path\":[\"track\",\"is_local\"]},\"_p_track.name\":{\"ret_value\":\"text\",\"caption\":\"track name\",\"path\":[\"track\",\"name\"]},\"_p_track.popularity\":{\"ret_value\":\"number\",\"caption\":\"track popularity\",\"path\":[\"track\",\"popularity\"]},\"_p_track.preview_url\":{\"ret_value\":\"text\",\"caption\":\"track preview_url\",\"path\":[\"track\",\"preview_url\"]},\"_p_track.track_number\":{\"ret_value\":\"number\",\"caption\":\"track track_number\",\"path\":[\"track\",\"track_number\"]},\"_p_track.type\":{\"ret_value\":\"text\",\"caption\":\"track type\",\"path\":[\"track\",\"type\"]},\"_p_track.uri\":{\"ret_value\":\"text\",\"caption\":\"track uri\",\"path\":[\"track\",\"uri\"]}}},\"plugin_api.AAR.track.album.artists\":{\"caption\":\"Liked tracks track album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}},\"plugin_api.AAR.track.album.images\":{\"caption\":\"Liked tracks track album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"path\":[\"width\"]}}},\"plugin_api.AAR.track.artists\":{\"caption\":\"Liked tracks track artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/tracks"
+        },
+        "AAT": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-users-top-artists-and-tracks",
+            "initialized": true,
+            "method": "get",
+            "name": "Get user top tracks",
+            "params": {
+                "AAV": {
+                    "doc": "The number of entities to return. Default: 20. Minimum: 1. Maximum: 50",
+                    "key": "limit",
+                    "private": true,
+                    "value": "50"
+                },
+                "ABk": {
+                    "doc": "Over what time frame the affinities are computed. Valid values: long_term (calculated from several years of data and including all new data as it becomes available), medium_term (approximately last 6 months), short_term (approximately last 4 weeks). Default: medium_term",
+                    "key": "time_range",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "data",
+            "rank": 10,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAT",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAT\":{\"caption\":\"Get user top track\",\"fields\":{\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAT.items\",\"caption\":\"items\",\"path\":[\"items\"]},\"_p_total\":{\"ret_value\":\"number\",\"caption\":\"total\",\"sample_value\":17,\"path\":[\"total\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"sample_value\":50,\"path\":[\"limit\"]},\"_p_offset\":{\"ret_value\":\"number\",\"caption\":\"offset\",\"sample_value\":0,\"path\":[\"offset\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/me/top/tracks?limit=50\",\"path\":[\"href\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"sample_value\":null,\"path\":[\"next\"]},\"_p_previous\":{\"ret_value\":\"text\",\"caption\":\"previous\",\"sample_value\":null,\"path\":[\"previous\"]}}},\"plugin_api.AAT.items\":{\"caption\":\"Get user top tracks item\",\"fields\":{\"_p_album.album_type\":{\"ret_value\":\"text\",\"caption\":\"album album_type\",\"sample_value\":\"ALBUM\",\"path\":[\"album\",\"album_type\"]},\"_p_album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAT.album.artists\",\"caption\":\"album artists\",\"path\":[\"album\",\"artists\"]},\"_p_album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"album available_markets\",\"sample_value\":\"AR\",\"path\":[\"album\",\"available_markets\"]},\"_p_album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/32kkHw8GnItrzLQ1qwupbJ\",\"path\":[\"album\",\"external_urls\",\"spotify\"]},\"_p_album.href\":{\"ret_value\":\"text\",\"caption\":\"album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/32kkHw8GnItrzLQ1qwupbJ\",\"path\":[\"album\",\"href\"]},\"_p_album.id\":{\"ret_value\":\"text\",\"caption\":\"album id\",\"sample_value\":\"32kkHw8GnItrzLQ1qwupbJ\",\"path\":[\"album\",\"id\"]},\"_p_album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAT.album.images\",\"caption\":\"album images\",\"path\":[\"album\",\"images\"]},\"_p_album.name\":{\"ret_value\":\"text\",\"caption\":\"album name\",\"sample_value\":\"Erik Satie & Friends\",\"path\":[\"album\",\"name\"]},\"_p_album.release_date\":{\"ret_value\":\"text\",\"caption\":\"album release_date\",\"sample_value\":\"1949\",\"path\":[\"album\",\"release_date\"]},\"_p_album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"album release_date_precision\",\"sample_value\":\"year\",\"path\":[\"album\",\"release_date_precision\"]},\"_p_album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"album total_tracks\",\"sample_value\":204,\"path\":[\"album\",\"total_tracks\"]},\"_p_album.type\":{\"ret_value\":\"text\",\"caption\":\"album type\",\"sample_value\":\"album\",\"path\":[\"album\",\"type\"]},\"_p_album.uri\":{\"ret_value\":\"text\",\"caption\":\"album uri\",\"sample_value\":\"spotify:album:32kkHw8GnItrzLQ1qwupbJ\",\"path\":[\"album\",\"uri\"]},\"_p_artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAT.artists\",\"caption\":\"artists\",\"path\":[\"artists\"]},\"_p_available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"available_markets\",\"sample_value\":\"AR\",\"path\":[\"available_markets\"]},\"_p_disc_number\":{\"ret_value\":\"number\",\"caption\":\"disc_number\",\"sample_value\":11,\"path\":[\"disc_number\"]},\"_p_duration_ms\":{\"ret_value\":\"number\",\"caption\":\"duration_ms\",\"sample_value\":205866,\"path\":[\"duration_ms\"]},\"_p_explicit\":{\"ret_value\":\"boolean\",\"caption\":\"explicit\",\"sample_value\":false,\"path\":[\"explicit\"]},\"_p_external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"external_ids isrc\",\"sample_value\":\"USSM11509437\",\"path\":[\"external_ids\",\"isrc\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/5NGtFXVpXSvwunEIGeviY3\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/5NGtFXVpXSvwunEIGeviY3\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5NGtFXVpXSvwunEIGeviY3\",\"path\":[\"id\"]},\"_p_is_local\":{\"ret_value\":\"boolean\",\"caption\":\"is_local\",\"sample_value\":false,\"path\":[\"is_local\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Gymnopédie No. 1\",\"path\":[\"name\"]},\"_p_popularity\":{\"ret_value\":\"number\",\"caption\":\"popularity\",\"sample_value\":71,\"path\":[\"popularity\"]},\"_p_preview_url\":{\"ret_value\":\"text\",\"caption\":\"preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/23063b891af42f8aedfe5ed0bad332ee6fb2b94e?cid=f9714304ab3e4f9897160f6bc869e28f\",\"path\":[\"preview_url\"]},\"_p_track_number\":{\"ret_value\":\"number\",\"caption\":\"track_number\",\"sample_value\":3,\"path\":[\"track_number\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"track\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:track:5NGtFXVpXSvwunEIGeviY3\",\"path\":[\"uri\"]}}},\"plugin_api.AAT.album.artists\":{\"caption\":\"Get user top tracks album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/459INk8vcC0ebEef82WjIK\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/459INk8vcC0ebEef82WjIK\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"459INk8vcC0ebEef82WjIK\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Erik Satie\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:459INk8vcC0ebEef82WjIK\",\"path\":[\"uri\"]}}},\"plugin_api.AAT.album.images\":{\"caption\":\"Get user top tracks album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b273fa24c97b4c8aaf5ccdcccf08\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.AAT.artists\":{\"caption\":\"Get user top tracks artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/459INk8vcC0ebEef82WjIK\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/459INk8vcC0ebEef82WjIK\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"459INk8vcC0ebEef82WjIK\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Erik Satie\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:459INk8vcC0ebEef82WjIK\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/top/[type]",
+            "url_params": {
+                "AAU": {
+                    "doc": "The type of entity to return. Valid values: artists or tracks",
+                    "key": "type",
+                    "private": true,
+                    "value": "tracks",
+                    "visibility": "hidden"
+                }
+            }
+        },
+        "AAW": {
+            "data_type": "XML",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-seek-to-position-in-currently-playing-track",
+            "initialized": true,
+            "method": "put",
+            "name": "Send position to player",
+            "params": {
+                "AAX": {
+                    "doc": "In miliseconds",
+                    "key": "position_ms",
+                    "private": true,
+                    "querystring": true,
+                    "value": "60000"
+                },
+                "AAY": {
+                    "doc": "The device this API call will affect",
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 12,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAW",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAW\":{\"caption\":\"Send position to player\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/seek"
+        },
+        "AAZ": {
+            "data_type": "XML",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-set-volume-for-users-playback",
+            "initialized": true,
+            "method": "put",
+            "name": "Send player volume",
+            "params": {
+                "AAa": {
+                    "doc": "0 - 100",
+                    "key": "volume_percent",
+                    "private": true,
+                    "querystring": true,
+                    "value": "100"
+                },
+                "AAb": {
+                    "doc": "The device this API call will affect",
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 13,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAZ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAZ\":{\"caption\":\"Send player volume\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/volume"
+        },
+        "AAc": {
+            "body": "{\n  \"context_uri\": \"<context_uri>\",\n  \"offset\": {\n    \"position\": <offset>\n  },\n  \"position_ms\": <position>\n}",
+            "body_params": {
+                "ADG": {
+                    "doc": "Position to start (ms)",
+                    "key": "position",
+                    "private": true,
+                    "value": "0"
+                },
+                "ADH": {
+                    "doc": "Item to start in the playlist or album (from 0)",
+                    "key": "offset",
+                    "private": true,
+                    "value": "0"
+                },
+                "ADf": {
+                    "doc": "Example:\n\nspotify:playlist:4woEPcGtrZi9KRbQ8Ja7YH",
+                    "key": "context_uri",
+                    "private": true,
+                    "value": "spotify:playlist:4woEPcGtrZi9KRbQ8Ja7YH"
+                }
+            },
+            "data_type": "empty",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-start-a-users-playback",
+            "initialized": true,
+            "method": "put",
+            "name": "Start Playing (playlist / album)",
+            "no_types": true,
+            "publish_as": "action",
+            "rank": 16,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAc",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAc\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/play"
+        },
+        "AAg": {
+            "data_type": "empty",
+            "headers": {
+                "AAh": {
+                    "doc": "The device this API call will affect",
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "put",
+            "name": "Pause Player",
+            "no_types": true,
+            "publish_as": "action",
+            "rank": 15,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAg",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAg\":{\"caption\":\"Pause Player\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/pause"
+        },
+        "AAi": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-a-list-of-current-users-playlists",
+            "initialized": true,
+            "method": "get",
+            "name": "Get user playlist list",
+            "params": {
+                "AAj": {
+                    "doc": "The maximum number of playlists to return. Default: 20. Minimum: 1. Maximum: 50",
+                    "key": "limit",
+                    "private": true,
+                    "value": "20"
+                }
+            },
+            "publish_as": "data",
+            "rank": 25,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAi",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAi\":{\"caption\":\"Get user playlist list\",\"fields\":{\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/users/31cotpnaozzwfpb7vqo5cpyykgly/playlists?offset=0&limit=20\",\"path\":[\"href\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"sample_value\":20,\"path\":[\"limit\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"sample_value\":null,\"path\":[\"next\"]},\"_p_offset\":{\"ret_value\":\"number\",\"caption\":\"offset\",\"sample_value\":0,\"path\":[\"offset\"]},\"_p_previous\":{\"ret_value\":\"text\",\"caption\":\"previous\",\"sample_value\":null,\"path\":[\"previous\"]},\"_p_total\":{\"ret_value\":\"number\",\"caption\":\"total\",\"sample_value\":12,\"path\":[\"total\"]},\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAi.items\",\"caption\":\"items\",\"path\":[\"items\"]}}},\"plugin_api.AAi.items\":{\"caption\":\"Get user playlist list item\",\"fields\":{\"_p_collaborative\":{\"ret_value\":\"boolean\",\"caption\":\"collaborative\",\"sample_value\":false,\"path\":[\"collaborative\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":\"J'ai tué ma mère, Les Amours imaginaires, Laurence Anyways, Tom à la ferme, Mommy, Juste la fin du monde\",\"path\":[\"description\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/2YbG96qplg6UR0RvewKDIB\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/2YbG96qplg6UR0RvewKDIB\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"2YbG96qplg6UR0RvewKDIB\",\"path\":[\"id\"]},\"_p_images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AAi.images\",\"caption\":\"images\",\"sample_value\":null,\"path\":[\"images\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Best of Xavier Dolan Music\",\"path\":[\"name\"]},\"_p_owner.display_name\":{\"ret_value\":\"text\",\"caption\":\"owner display_name\",\"sample_value\":\"Movie Music Club\",\"path\":[\"owner\",\"display_name\"]},\"_p_owner.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"owner external_urls spotify\",\"sample_value\":\"https://open.spotify.com/user/moviemusicclub\",\"path\":[\"owner\",\"external_urls\",\"spotify\"]},\"_p_owner.href\":{\"ret_value\":\"text\",\"caption\":\"owner href\",\"sample_value\":\"https://api.spotify.com/v1/users/moviemusicclub\",\"path\":[\"owner\",\"href\"]},\"_p_owner.id\":{\"ret_value\":\"text\",\"caption\":\"owner id\",\"sample_value\":\"moviemusicclub\",\"path\":[\"owner\",\"id\"]},\"_p_owner.type\":{\"ret_value\":\"text\",\"caption\":\"owner type\",\"sample_value\":\"user\",\"path\":[\"owner\",\"type\"]},\"_p_owner.uri\":{\"ret_value\":\"text\",\"caption\":\"owner uri\",\"sample_value\":\"spotify:user:moviemusicclub\",\"path\":[\"owner\",\"uri\"]},\"_p_primary_color\":{\"ret_value\":\"text\",\"caption\":\"primary_color\",\"sample_value\":null,\"path\":[\"primary_color\"]},\"_p_public\":{\"ret_value\":\"boolean\",\"caption\":\"public\",\"sample_value\":true,\"path\":[\"public\"]},\"_p_snapshot_id\":{\"ret_value\":\"text\",\"caption\":\"snapshot_id\",\"sample_value\":\"MzYsNTUzYWNiYTA0YTQxYmUwYzkzZDBkYWZiYWY5ZGFkOTY0YWY3NDY2OQ==\",\"path\":[\"snapshot_id\"]},\"_p_tracks.href\":{\"ret_value\":\"text\",\"caption\":\"tracks href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/2YbG96qplg6UR0RvewKDIB/tracks\",\"path\":[\"tracks\",\"href\"]},\"_p_tracks.total\":{\"ret_value\":\"number\",\"caption\":\"tracks total\",\"sample_value\":21,\"path\":[\"tracks\",\"total\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"playlist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:playlist:2YbG96qplg6UR0RvewKDIB\",\"path\":[\"uri\"]}}},\"plugin_api.AAi.images\":{\"caption\":\"Get user playlist list image\",\"fields\":{\"_p_height\":{\"ret_value\":\"text\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84672976101f455a3c295ca0b4\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"text\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/playlists"
+        },
+        "AAk": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-playlist",
+            "initialized": true,
+            "method": "get",
+            "name": "Get playlist information",
+            "params": {
+                "AAm": {
+                    "doc": "Filters for the query: a comma-separated list of the fields to return. \n\nIf omitted, all fields are returned.\n\nFor example, to get just the playlist’s description and URI: fields=description,uri.\nA dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. \n\nFor example, to get just the added date and user ID of the adder: fields=tracks.items(added_at,added_by.id). \n\nUse multiple parentheses to drill down into nested objects, for example: fields=tracks.items(track(name,href,album(name,href))). \n\nFields can be excluded by prefixing them with an exclamation mark, for example: fields=tracks.items(track(name,href,album(!name,href)))\t",
+                    "key": "fields",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "data",
+            "rank": 26,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAk",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAk\":{\"caption\":\"Get playlist item\",\"fields\":{\"_p_collaborative\":{\"ret_value\":\"boolean\",\"caption\":\"collaborative\",\"sample_value\":false,\"path\":[\"collaborative\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":\"\",\"path\":[\"description\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_followers.href\":{\"ret_value\":\"text\",\"caption\":\"followers href\",\"sample_value\":null,\"path\":[\"followers\",\"href\"]},\"_p_followers.total\":{\"ret_value\":\"number\",\"caption\":\"followers total\",\"sample_value\":0,\"path\":[\"followers\",\"total\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"testtt\",\"path\":[\"name\"]},\"_p_owner.display_name\":{\"ret_value\":\"text\",\"caption\":\"owner display_name\",\"sample_value\":\"Victor Nihoul\",\"path\":[\"owner\",\"display_name\"]},\"_p_owner.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"owner external_urls spotify\",\"sample_value\":\"https://open.spotify.com/user/11137487518\",\"path\":[\"owner\",\"external_urls\",\"spotify\"]},\"_p_owner.href\":{\"ret_value\":\"text\",\"caption\":\"owner href\",\"sample_value\":\"https://api.spotify.com/v1/users/11137487518\",\"path\":[\"owner\",\"href\"]},\"_p_owner.id\":{\"ret_value\":\"text\",\"caption\":\"owner id\",\"sample_value\":\"11137487518\",\"path\":[\"owner\",\"id\"]},\"_p_owner.type\":{\"ret_value\":\"text\",\"caption\":\"owner type\",\"sample_value\":\"user\",\"path\":[\"owner\",\"type\"]},\"_p_owner.uri\":{\"ret_value\":\"text\",\"caption\":\"owner uri\",\"sample_value\":\"spotify:user:11137487518\",\"path\":[\"owner\",\"uri\"]},\"_p_primary_color\":{\"ret_value\":\"text\",\"caption\":\"primary_color\",\"sample_value\":null,\"path\":[\"primary_color\"]},\"_p_public\":{\"ret_value\":\"boolean\",\"caption\":\"public\",\"sample_value\":true,\"path\":[\"public\"]},\"_p_snapshot_id\":{\"ret_value\":\"text\",\"caption\":\"snapshot_id\",\"sample_value\":\"MSxhMWIzYTYzMDY1ZTFiZDQzYTYwYWQzZWFhMTM2ZTJhYmJjODVmNTg2\",\"path\":[\"snapshot_id\"]},\"_p_tracks.href\":{\"ret_value\":\"text\",\"caption\":\"tracks href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/4d9cuGLxxaANfgAn9dmZkt/tracks?offset=0&limit=100\",\"path\":[\"tracks\",\"href\"]},\"_p_tracks.limit\":{\"ret_value\":\"number\",\"caption\":\"tracks limit\",\"sample_value\":100,\"path\":[\"tracks\",\"limit\"]},\"_p_tracks.next\":{\"ret_value\":\"text\",\"caption\":\"tracks next\",\"sample_value\":null,\"path\":[\"tracks\",\"next\"]},\"_p_tracks.offset\":{\"ret_value\":\"number\",\"caption\":\"tracks offset\",\"sample_value\":0,\"path\":[\"tracks\",\"offset\"]},\"_p_tracks.previous\":{\"ret_value\":\"text\",\"caption\":\"tracks previous\",\"sample_value\":null,\"path\":[\"tracks\",\"previous\"]},\"_p_tracks.total\":{\"ret_value\":\"number\",\"caption\":\"tracks total\",\"sample_value\":0,\"path\":[\"tracks\",\"total\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"playlist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:playlist:4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]",
+            "url_params": {
+                "AAl": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "AAn": {
+            "data_type": "XML",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-change-playlist-details",
+            "initialized": true,
+            "method": "put",
+            "name": "Change a Playlist's Details",
+            "params": {
+                "AAp": {
+                    "doc": "The new name for the playlist, for example \"My New Playlist Title\"",
+                    "key": "name",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AAq": {
+                    "doc": "If true the playlist will be public, if false it will be private.",
+                    "key": "public",
+                    "optional": false,
+                    "private": true,
+                    "querystring": true,
+                    "value": ""
+                },
+                "AAr": {
+                    "doc": "If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. \n\nNote: You can only set collaborative to true on non-public playlists.",
+                    "key": "collaborative",
+                    "optional": true,
+                    "private": true,
+                    "querystring": true,
+                    "value": "false"
+                },
+                "AAs": {
+                    "doc": "Value for playlist description as displayed in Spotify Clients and in the Web API.",
+                    "key": "description",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 31,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAn",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAn\":{\"caption\":\"Change a Playlist's Detail\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]",
+            "url_params": {
+                "AAo": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": "5IubgNQj1iPvXRy6v0XiYW"
+                }
+            }
+        },
+        "AAt": {
+            "data_type": "JSON",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-create-playlist",
+            "initialized": true,
+            "method": "post",
+            "name": "Create a Playlist",
+            "params": {
+                "AAv": {
+                    "doc": "The name for the new playlist, for example \"Your Coolest Playlist\" . \n\nThis name does not need to be unique; a user may have several playlists with the same name.",
+                    "key": "name",
+                    "private": true,
+                    "value": ""
+                },
+                "AAw": {
+                    "doc": "Defaults to true .\nIf true the playlist will be public, if false it will be private.\ncollaborative",
+                    "key": "public",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AAx": {
+                    "doc": "Defaults to false . If true the playlist will be collaborative. Note that to create a collaborative playlist you must also set public to false .",
+                    "key": "collaborative",
+                    "optional": true,
+                    "private": true,
+                    "value": "false"
+                },
+                "AAy": {
+                    "doc": "Value for playlist description as displayed in Spotify Clients and in the Web API.",
+                    "key": "description",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 30,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AAt",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAt\":{\"caption\":\"Create a Playlist\",\"fields\":{\"_p_collaborative\":{\"ret_value\":\"boolean\",\"caption\":\"collaborative\",\"sample_value\":false,\"path\":[\"collaborative\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":null,\"path\":[\"description\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_followers.href\":{\"ret_value\":\"text\",\"caption\":\"followers href\",\"sample_value\":null,\"path\":[\"followers\",\"href\"]},\"_p_followers.total\":{\"ret_value\":\"number\",\"caption\":\"followers total\",\"sample_value\":0,\"path\":[\"followers\",\"total\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"testtt\",\"path\":[\"name\"]},\"_p_owner.display_name\":{\"ret_value\":\"text\",\"caption\":\"owner display_name\",\"sample_value\":\"Victor Nihoul\",\"path\":[\"owner\",\"display_name\"]},\"_p_owner.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"owner external_urls spotify\",\"sample_value\":\"https://open.spotify.com/user/11137487518\",\"path\":[\"owner\",\"external_urls\",\"spotify\"]},\"_p_owner.href\":{\"ret_value\":\"text\",\"caption\":\"owner href\",\"sample_value\":\"https://api.spotify.com/v1/users/11137487518\",\"path\":[\"owner\",\"href\"]},\"_p_owner.id\":{\"ret_value\":\"text\",\"caption\":\"owner id\",\"sample_value\":\"11137487518\",\"path\":[\"owner\",\"id\"]},\"_p_owner.type\":{\"ret_value\":\"text\",\"caption\":\"owner type\",\"sample_value\":\"user\",\"path\":[\"owner\",\"type\"]},\"_p_owner.uri\":{\"ret_value\":\"text\",\"caption\":\"owner uri\",\"sample_value\":\"spotify:user:11137487518\",\"path\":[\"owner\",\"uri\"]},\"_p_primary_color\":{\"ret_value\":\"text\",\"caption\":\"primary_color\",\"sample_value\":null,\"path\":[\"primary_color\"]},\"_p_public\":{\"ret_value\":\"boolean\",\"caption\":\"public\",\"sample_value\":true,\"path\":[\"public\"]},\"_p_snapshot_id\":{\"ret_value\":\"text\",\"caption\":\"snapshot_id\",\"sample_value\":\"MSxhMWIzYTYzMDY1ZTFiZDQzYTYwYWQzZWFhMTM2ZTJhYmJjODVmNTg2\",\"path\":[\"snapshot_id\"]},\"_p_tracks.href\":{\"ret_value\":\"text\",\"caption\":\"tracks href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/4d9cuGLxxaANfgAn9dmZkt/tracks\",\"path\":[\"tracks\",\"href\"]},\"_p_tracks.limit\":{\"ret_value\":\"number\",\"caption\":\"tracks limit\",\"sample_value\":100,\"path\":[\"tracks\",\"limit\"]},\"_p_tracks.next\":{\"ret_value\":\"text\",\"caption\":\"tracks next\",\"sample_value\":null,\"path\":[\"tracks\",\"next\"]},\"_p_tracks.offset\":{\"ret_value\":\"number\",\"caption\":\"tracks offset\",\"sample_value\":0,\"path\":[\"tracks\",\"offset\"]},\"_p_tracks.previous\":{\"ret_value\":\"text\",\"caption\":\"tracks previous\",\"sample_value\":null,\"path\":[\"tracks\",\"previous\"]},\"_p_tracks.total\":{\"ret_value\":\"number\",\"caption\":\"tracks total\",\"sample_value\":0,\"path\":[\"tracks\",\"total\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"playlist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:playlist:4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/users/[user_id]/playlists",
+            "url_params": {
+                "AAu": {
+                    "key": "user_id",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABG": {
+            "body": "",
+            "body_type": "json",
+            "data_type": "JSON",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-add-tracks-to-playlist",
+            "get_headers": false,
+            "headers": {
+                "ABr": {
+                    "key": "Content-Type",
+                    "private": true,
+                    "value": "application/json"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Add Items to a Playlist",
+            "params": {
+                "ABN": {
+                    "doc": "The position to insert the items, a zero-based index.\nFor example, to insert the items in the first position: position=0;\nto insert the items in the third position: position=2 .\n\nIf omitted, the items will be appended to the playlist.\nItems are added in the order they are listed in the query string or request body.",
+                    "key": "position",
+                    "optional": true,
+                    "private": true,
+                    "querystring": true,
+                    "value": ""
+                },
+                "ABs": {
+                    "key": "uris",
+                    "optional": true,
+                    "private": true,
+                    "querystring": true,
+                    "value": "spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M"
+                }
+            },
+            "publish_as": "action",
+            "rank": 32,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ABG",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABG\":{\"caption\":\"[BUG] Add Items to a Playlist\",\"fields\":{\"_p_snapshot_id\":{\"ret_value\":\"text\",\"caption\":\"snapshot_id\",\"sample_value\":\"MjUsZmU4Y2I5NmE2MzgxNmVlMTk4MTYzZWE4MTgwYjQ0MDU4MTE1MmQyMA==\",\"path\":[\"snapshot_id\"]}}}}",
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]/tracks",
+            "url_params": {
+                "ABH": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": "2qgkcglr3V1EEHODufNVHR"
+                }
+            }
+        },
+        "ABY": {
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference/browse/get-recommendations/",
+            "initialized": true,
+            "method": "get",
+            "name": "Get recommendations",
+            "params": {
+                "ABZ": {
+                    "doc": "The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. ",
+                    "key": "limit",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABa": {
+                    "key": "market",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABb": {
+                    "doc": "\tA comma separated list of Spotify IDs for seed artists. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
+                    "key": "seed_artists",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABc": {
+                    "doc": "A comma separated list of any genres in the set of available genre seeds. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
+                    "key": "seed_genres",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABd": {
+                    "doc": "A comma separated list of Spotify IDs for a seed track. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
+                    "key": "seed_tracks",
+                    "optional": true,
+                    "private": true,
+                    "value": "01GPBH2rbcVMnPesDm7jbu"
+                }
+            },
+            "publish_as": "data",
+            "rank": 34,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ABY",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ABY\":{\"caption\":\"Get recommendation\",\"fields\":{\"_p_tracks\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ABY.tracks\",\"caption\":\"tracks\",\"path\":[\"tracks\"]},\"_p_seeds\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ABY.seeds\",\"caption\":\"seeds\",\"path\":[\"seeds\"]}}},\"plugin_api.ABY.tracks\":{\"caption\":\"Get recommendations track\",\"fields\":{\"_p_album.album_type\":{\"ret_value\":\"text\",\"caption\":\"album album_type\",\"sample_value\":\"ALBUM\",\"path\":[\"album\",\"album_type\"]},\"_p_album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ABY.album.artists\",\"caption\":\"album artists\",\"path\":[\"album\",\"artists\"]},\"_p_album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"album available_markets\",\"sample_value\":\"AD\",\"path\":[\"album\",\"available_markets\"]},\"_p_album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/10UscF31tC7Sz8S2a1mGbM\",\"path\":[\"album\",\"external_urls\",\"spotify\"]},\"_p_album.href\":{\"ret_value\":\"text\",\"caption\":\"album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/10UscF31tC7Sz8S2a1mGbM\",\"path\":[\"album\",\"href\"]},\"_p_album.id\":{\"ret_value\":\"text\",\"caption\":\"album id\",\"sample_value\":\"10UscF31tC7Sz8S2a1mGbM\",\"path\":[\"album\",\"id\"]},\"_p_album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ABY.album.images\",\"caption\":\"album images\",\"path\":[\"album\",\"images\"]},\"_p_album.name\":{\"ret_value\":\"text\",\"caption\":\"album name\",\"sample_value\":\"Bucket List Project\",\"path\":[\"album\",\"name\"]},\"_p_album.release_date\":{\"ret_value\":\"text\",\"caption\":\"album release_date\",\"sample_value\":\"2016-10-27\",\"path\":[\"album\",\"release_date\"]},\"_p_album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"album\",\"release_date_precision\"]},\"_p_album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"album total_tracks\",\"sample_value\":13,\"path\":[\"album\",\"total_tracks\"]},\"_p_album.type\":{\"ret_value\":\"text\",\"caption\":\"album type\",\"sample_value\":\"album\",\"path\":[\"album\",\"type\"]},\"_p_album.uri\":{\"ret_value\":\"text\",\"caption\":\"album uri\",\"sample_value\":\"spotify:album:10UscF31tC7Sz8S2a1mGbM\",\"path\":[\"album\",\"uri\"]},\"_p_artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ABY.artists\",\"caption\":\"artists\",\"path\":[\"artists\"]},\"_p_available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"available_markets\",\"sample_value\":\"AD\",\"path\":[\"available_markets\"]},\"_p_disc_number\":{\"ret_value\":\"number\",\"caption\":\"disc_number\",\"sample_value\":1,\"path\":[\"disc_number\"]},\"_p_duration_ms\":{\"ret_value\":\"number\",\"caption\":\"duration_ms\",\"sample_value\":177246,\"path\":[\"duration_ms\"]},\"_p_explicit\":{\"ret_value\":\"boolean\",\"caption\":\"explicit\",\"sample_value\":true,\"path\":[\"explicit\"]},\"_p_external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"external_ids isrc\",\"sample_value\":\"USUYG1115897\",\"path\":[\"external_ids\",\"isrc\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/5MUWpxHzlG5M5N2C0T7qs9\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/5MUWpxHzlG5M5N2C0T7qs9\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5MUWpxHzlG5M5N2C0T7qs9\",\"path\":[\"id\"]},\"_p_is_local\":{\"ret_value\":\"boolean\",\"caption\":\"is_local\",\"sample_value\":false,\"path\":[\"is_local\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Westside Bound 3\",\"path\":[\"name\"]},\"_p_popularity\":{\"ret_value\":\"number\",\"caption\":\"popularity\",\"sample_value\":46,\"path\":[\"popularity\"]},\"_p_preview_url\":{\"ret_value\":\"text\",\"caption\":\"preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/ea4d58f09278a0905f7230212f3803040666caf2?cid=9a524b121201476d9fcc60ba8838dc09\",\"path\":[\"preview_url\"]},\"_p_track_number\":{\"ret_value\":\"number\",\"caption\":\"track_number\",\"sample_value\":5,\"path\":[\"track_number\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"track\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:track:5MUWpxHzlG5M5N2C0T7qs9\",\"path\":[\"uri\"]}}},\"plugin_api.ABY.album.artists\":{\"caption\":\"Get recommendations album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Saba\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"uri\"]}}},\"plugin_api.ABY.album.images\":{\"caption\":\"Get recommendations album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b273eec9bfc96c9e0495b35e2257\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.ABY.artists\":{\"caption\":\"Get recommendations artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Saba\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:7Hjbimq43OgxaBRpFXic4x\",\"path\":[\"uri\"]}}},\"plugin_api.ABY.seeds\":{\"caption\":\"Get recommendations seed\",\"fields\":{\"_p_initialPoolSize\":{\"ret_value\":\"number\",\"caption\":\"initialPoolSize\",\"sample_value\":249,\"path\":[\"initialPoolSize\"]},\"_p_afterFilteringSize\":{\"ret_value\":\"number\",\"caption\":\"afterFilteringSize\",\"sample_value\":249,\"path\":[\"afterFilteringSize\"]},\"_p_afterRelinkingSize\":{\"ret_value\":\"number\",\"caption\":\"afterRelinkingSize\",\"sample_value\":249,\"path\":[\"afterRelinkingSize\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"01GPBH2rbcVMnPesDm7jbu\",\"path\":[\"id\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"TRACK\",\"path\":[\"type\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/01GPBH2rbcVMnPesDm7jbu\",\"path\":[\"href\"]}}}}",
+            "url": "https://api.spotify.com/v1/recommendations"
+        },
+        "ABe": {
+            "body_type": "json",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference/playlists/upload-custom-playlist-cover/",
+            "headers": {
+                "ABg": {
+                    "key": "Content-Type",
+                    "private": true,
+                    "value": "image/jpeg",
+                    "visibility": "hidden"
+                }
+            },
+            "method": "put",
+            "name": "Upload a Custom Playlist Cover Image",
+            "publish_as": "data",
+            "rank": 35,
+            "should_reinitialize": true,
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]/images",
+            "url_params": {
+                "ABf": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABi": {
+            "0": "A",
+            "1": "B",
+            "2": "h",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-users-top-artists-and-tracks",
+            "initialized": true,
+            "method": "get",
+            "name": "Get user top artists",
+            "params": {
+                "AAV": {
+                    "doc": "The number of entities to return. Default: 20. Minimum: 1. Maximum: 50",
+                    "key": "limit",
+                    "private": true,
+                    "value": "50"
+                },
+                "ABj": {
+                    "doc": "Over what time frame the affinities are computed. Valid values: long_term (calculated from several years of data and including all new data as it becomes available), medium_term (approximately last 6 months), short_term (approximately last 4 weeks). Default: medium_term",
+                    "key": "time_range",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "data",
+            "rank": 11,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ABi",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABi\":{\"caption\":\"Get user top artist\",\"fields\":{\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ABi.items\",\"caption\":\"items\",\"path\":[\"items\"]},\"_p_total\":{\"ret_value\":\"number\",\"caption\":\"total\",\"sample_value\":50,\"path\":[\"total\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"sample_value\":50,\"path\":[\"limit\"]},\"_p_offset\":{\"ret_value\":\"number\",\"caption\":\"offset\",\"sample_value\":0,\"path\":[\"offset\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/me/top/artists?limit=50&offset=0\",\"path\":[\"href\"]},\"_p_previous\":{\"ret_value\":\"text\",\"caption\":\"previous\",\"sample_value\":null,\"path\":[\"previous\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"sample_value\":null,\"path\":[\"next\"]}}},\"plugin_api.ABi.items\":{\"caption\":\"Get user top artists item\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/2feDdbD5araYcm6JhFHHw7\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_followers.href\":{\"ret_value\":\"text\",\"caption\":\"followers href\",\"sample_value\":null,\"path\":[\"followers\",\"href\"]},\"_p_followers.total\":{\"ret_value\":\"number\",\"caption\":\"followers total\",\"sample_value\":1559884,\"path\":[\"followers\",\"total\"]},\"_p_genres\":{\"ret_value\":\"list.text\",\"caption\":\"genres\",\"sample_value\":\"dance pop\",\"path\":[\"genres\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/2feDdbD5araYcm6JhFHHw7\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"2feDdbD5araYcm6JhFHHw7\",\"path\":[\"id\"]},\"_p_images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ABi.images\",\"caption\":\"images\",\"path\":[\"images\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Labrinth\",\"path\":[\"name\"]},\"_p_popularity\":{\"ret_value\":\"number\",\"caption\":\"popularity\",\"sample_value\":83,\"path\":[\"popularity\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:2feDdbD5araYcm6JhFHHw7\",\"path\":[\"uri\"]}}},\"plugin_api.ABi.images\":{\"caption\":\"Get user top artists image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/d9a7e54f8df26abde79fd1be03f40d4e8569f590\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/top/[type]",
+            "url_params": {
+                "AAU": {
+                    "doc": "The type of entity to return. Valid values: artists or tracks",
+                    "key": "type",
+                    "private": true,
+                    "value": "artists",
+                    "visibility": "hidden"
+                }
+            }
+        },
+        "ABn": {
+            "0": "A",
+            "1": "B",
+            "2": "m",
+            "data_type": "text",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference/#endpoint-unfollow-playlist",
+            "initialized": true,
+            "method": "delete_method",
+            "name": "Unsubscrible to playlist (delete)",
+            "no_types": true,
+            "publish_as": "action",
+            "rank": 29,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ABm",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABm\":{\"caption\":\"Get playlist item\",\"fields\":{\"_p_collaborative\":{\"ret_value\":\"boolean\",\"caption\":\"collaborative\",\"sample_value\":false,\"path\":[\"collaborative\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":\"\",\"path\":[\"description\"]},\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_followers.href\":{\"ret_value\":\"text\",\"caption\":\"followers href\",\"sample_value\":null,\"path\":[\"followers\",\"href\"]},\"_p_followers.total\":{\"ret_value\":\"number\",\"caption\":\"followers total\",\"sample_value\":0,\"path\":[\"followers\",\"total\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"testtt\",\"path\":[\"name\"]},\"_p_owner.display_name\":{\"ret_value\":\"text\",\"caption\":\"owner display_name\",\"sample_value\":\"Victor Nihoul\",\"path\":[\"owner\",\"display_name\"]},\"_p_owner.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"owner external_urls spotify\",\"sample_value\":\"https://open.spotify.com/user/11137487518\",\"path\":[\"owner\",\"external_urls\",\"spotify\"]},\"_p_owner.href\":{\"ret_value\":\"text\",\"caption\":\"owner href\",\"sample_value\":\"https://api.spotify.com/v1/users/11137487518\",\"path\":[\"owner\",\"href\"]},\"_p_owner.id\":{\"ret_value\":\"text\",\"caption\":\"owner id\",\"sample_value\":\"11137487518\",\"path\":[\"owner\",\"id\"]},\"_p_owner.type\":{\"ret_value\":\"text\",\"caption\":\"owner type\",\"sample_value\":\"user\",\"path\":[\"owner\",\"type\"]},\"_p_owner.uri\":{\"ret_value\":\"text\",\"caption\":\"owner uri\",\"sample_value\":\"spotify:user:11137487518\",\"path\":[\"owner\",\"uri\"]},\"_p_primary_color\":{\"ret_value\":\"text\",\"caption\":\"primary_color\",\"sample_value\":null,\"path\":[\"primary_color\"]},\"_p_public\":{\"ret_value\":\"boolean\",\"caption\":\"public\",\"sample_value\":true,\"path\":[\"public\"]},\"_p_snapshot_id\":{\"ret_value\":\"text\",\"caption\":\"snapshot_id\",\"sample_value\":\"MSxhMWIzYTYzMDY1ZTFiZDQzYTYwYWQzZWFhMTM2ZTJhYmJjODVmNTg2\",\"path\":[\"snapshot_id\"]},\"_p_tracks.href\":{\"ret_value\":\"text\",\"caption\":\"tracks href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/4d9cuGLxxaANfgAn9dmZkt/tracks?offset=0&limit=100\",\"path\":[\"tracks\",\"href\"]},\"_p_tracks.limit\":{\"ret_value\":\"number\",\"caption\":\"tracks limit\",\"sample_value\":100,\"path\":[\"tracks\",\"limit\"]},\"_p_tracks.next\":{\"ret_value\":\"text\",\"caption\":\"tracks next\",\"sample_value\":null,\"path\":[\"tracks\",\"next\"]},\"_p_tracks.offset\":{\"ret_value\":\"number\",\"caption\":\"tracks offset\",\"sample_value\":0,\"path\":[\"tracks\",\"offset\"]},\"_p_tracks.previous\":{\"ret_value\":\"text\",\"caption\":\"tracks previous\",\"sample_value\":null,\"path\":[\"tracks\",\"previous\"]},\"_p_tracks.total\":{\"ret_value\":\"number\",\"caption\":\"tracks total\",\"sample_value\":0,\"path\":[\"tracks\",\"total\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"playlist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:playlist:4d9cuGLxxaANfgAn9dmZkt\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]/followers",
+            "url_params": {
+                "AAl": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABu": {
+            "0": "A",
+            "1": "B",
+            "2": "t",
+            "body": "{ \"tracks\": [<Tracks>] }",
+            "body_params": {
+                "ACD": {
+                    "doc": "An array of objects containing Spotify URIs of the tracks or episodes to remove. \n\nFor example: { \"uri\": \"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\" },{ \"uri\": \"spotify:track:1301WleyT98MSxVHPZCA6M\" }\n\nA maximum of 100 objects can be sent at once.",
+                    "key": "Tracks",
+                    "private": true,
+                    "value": "{ \"uri\": \"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\" },{ \"uri\": \"spotify:track:1301WleyT98MSxVHPZCA6M\" }"
+                }
+            },
+            "body_type": "json",
+            "data_type": "JSON",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference/#endpoint-remove-tracks-playlist",
+            "get_headers": false,
+            "headers": {
+                "ABr": {
+                    "key": "Content-Type",
+                    "private": true,
+                    "value": "application/json"
+                }
+            },
+            "initialized": true,
+            "method": "delete_method",
+            "name": "Delete Items to a Playlist",
+            "publish_as": "action",
+            "rank": 33,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ABu",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABu\":{\"caption\":\"Delete Items to a Playlist\",\"fields\":{\"_p_snapshot_id\":{\"ret_value\":\"text\",\"caption\":\"snapshot_id\",\"sample_value\":\"MjksNTE0MmFhNjY2NDliZDdiZTgwYTc2Mzk2MjgxYjg4MTgxMjc4YzQ5Mg==\",\"path\":[\"snapshot_id\"]}}}}",
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]/tracks",
+            "url_params": {
+                "ABH": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": "2qgkcglr3V1EEHODufNVHR"
+                }
+            }
+        },
+        "ACF": {
+            "0": "A",
+            "1": "C",
+            "2": "E",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-get-playlist",
+            "initialized": true,
+            "is_list": true,
+            "method": "get",
+            "name": "Get playlist cover image",
+            "publish_as": "data",
+            "rank": 28,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ACF",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ACF\":{\"caption\":\"Get playlist cover image\",\"fields\":{\"_p_height\":{\"ret_value\":\"text\",\"caption\":\"height\",\"sample_value\":null,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67706c0000bebb34eb5ac8d67366f7afd7e237\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"text\",\"caption\":\"width\",\"sample_value\":null,\"path\":[\"width\"]}}}}",
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]/images",
+            "url_params": {
+                "AAl": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": "48sHE0nZIXRuvre0zhypbD"
+                }
+            }
+        },
+        "ACK": {
+            "0": "A",
+            "1": "C",
+            "2": "J",
+            "body": "{\n  \"device_ids\": [\n    \"<device_id>\"\n  ],\n  \"play\":<play>\n}",
+            "body_params": {
+                "ACZ": {
+                    "doc": "ID of the device on which playback should be started/transferred.",
+                    "key": "device_id",
+                    "private": true,
+                    "value": "bdeebdba2f9cb76417400b055e9319a39da116a5"
+                },
+                "ACi": {
+                    "doc": "true: ensure playback happens on new device.\nfalse: keep the current playback state.",
+                    "key": "play",
+                    "private": true,
+                    "value": "true"
+                }
+            },
+            "data_type": "empty",
+            "doc_link": "",
+            "initialized": true,
+            "method": "put",
+            "name": "Transfer a User's Playback",
+            "no_types": true,
+            "publish_as": "data",
+            "rank": 7,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ACJ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ACJ\":{\"caption\":\"Current Playback\",\"fields\":{\"_p_device.id\":{\"ret_value\":\"text\",\"caption\":\"device id\",\"sample_value\":null,\"path\":[\"device\",\"id\"]},\"_p_device.is_active\":{\"ret_value\":\"boolean\",\"caption\":\"device is_active\",\"sample_value\":true,\"path\":[\"device\",\"is_active\"]},\"_p_device.is_private_session\":{\"ret_value\":\"boolean\",\"caption\":\"device is_private_session\",\"sample_value\":false,\"path\":[\"device\",\"is_private_session\"]},\"_p_device.is_restricted\":{\"ret_value\":\"boolean\",\"caption\":\"device is_restricted\",\"sample_value\":true,\"path\":[\"device\",\"is_restricted\"]},\"_p_device.name\":{\"ret_value\":\"text\",\"caption\":\"device name\",\"sample_value\":\"Salon + 2\",\"path\":[\"device\",\"name\"]},\"_p_device.type\":{\"ret_value\":\"text\",\"caption\":\"device type\",\"sample_value\":\"Speaker\",\"path\":[\"device\",\"type\"]},\"_p_device.volume_percent\":{\"ret_value\":\"number\",\"caption\":\"device volume_percent\",\"sample_value\":20,\"path\":[\"device\",\"volume_percent\"]},\"_p_shuffle_state\":{\"ret_value\":\"boolean\",\"caption\":\"shuffle_state\",\"sample_value\":false,\"path\":[\"shuffle_state\"]},\"_p_repeat_state\":{\"ret_value\":\"text\",\"caption\":\"repeat_state\",\"sample_value\":\"off\",\"path\":[\"repeat_state\"]},\"_p_timestamp\":{\"ret_value\":\"date_unix\",\"caption\":\"timestamp\",\"sample_value\":1616917633869,\"path\":[\"timestamp\"]},\"_p_context.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"context external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"external_urls\",\"spotify\"]},\"_p_context.href\":{\"ret_value\":\"text\",\"caption\":\"context href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"href\"]},\"_p_context.type\":{\"ret_value\":\"text\",\"caption\":\"context type\",\"sample_value\":\"playlist\",\"path\":[\"context\",\"type\"]},\"_p_context.uri\":{\"ret_value\":\"text\",\"caption\":\"context uri\",\"sample_value\":\"spotify:playlist:48sHE0nZIXRuvre0zhypbD\",\"path\":[\"context\",\"uri\"]},\"_p_progress_ms\":{\"ret_value\":\"number\",\"caption\":\"progress_ms\",\"sample_value\":87071,\"path\":[\"progress_ms\"]},\"_p_item.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"item album album_type\",\"sample_value\":\"single\",\"path\":[\"item\",\"album\",\"album_type\"]},\"_p_item.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ACJ.item.album.artists\",\"caption\":\"item album artists\",\"path\":[\"item\",\"album\",\"artists\"]},\"_p_item.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"item album available_markets\",\"sample_value\":\"AD\",\"path\":[\"item\",\"album\",\"available_markets\"]},\"_p_item.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"item album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"external_urls\",\"spotify\"]},\"_p_item.album.href\":{\"ret_value\":\"text\",\"caption\":\"item album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"href\"]},\"_p_item.album.id\":{\"ret_value\":\"text\",\"caption\":\"item album id\",\"sample_value\":\"4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"id\"]},\"_p_item.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ACJ.item.album.images\",\"caption\":\"item album images\",\"path\":[\"item\",\"album\",\"images\"]},\"_p_item.album.name\":{\"ret_value\":\"text\",\"caption\":\"item album name\",\"sample_value\":\"Lo Vas A Olvidar (with ROSALÍA)\",\"path\":[\"item\",\"album\",\"name\"]},\"_p_item.album.release_date\":{\"ret_value\":\"text\",\"caption\":\"item album release_date\",\"sample_value\":\"2021-01-21\",\"path\":[\"item\",\"album\",\"release_date\"]},\"_p_item.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"item album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"item\",\"album\",\"release_date_precision\"]},\"_p_item.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"item album total_tracks\",\"sample_value\":1,\"path\":[\"item\",\"album\",\"total_tracks\"]},\"_p_item.album.type\":{\"ret_value\":\"text\",\"caption\":\"item album type\",\"sample_value\":\"album\",\"path\":[\"item\",\"album\",\"type\"]},\"_p_item.album.uri\":{\"ret_value\":\"text\",\"caption\":\"item album uri\",\"sample_value\":\"spotify:album:4E8puNI8tw7cXz6YJkwMew\",\"path\":[\"item\",\"album\",\"uri\"]},\"_p_item.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ACJ.item.artists\",\"caption\":\"item artists\",\"path\":[\"item\",\"artists\"]},\"_p_item.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"item available_markets\",\"sample_value\":\"AD\",\"path\":[\"item\",\"available_markets\"]},\"_p_item.disc_number\":{\"ret_value\":\"number\",\"caption\":\"item disc_number\",\"sample_value\":1,\"path\":[\"item\",\"disc_number\"]},\"_p_item.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"item duration_ms\",\"sample_value\":203464,\"path\":[\"item\",\"duration_ms\"]},\"_p_item.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"item explicit\",\"sample_value\":false,\"path\":[\"item\",\"explicit\"]},\"_p_item.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"item external_ids isrc\",\"sample_value\":\"USUM72100008\",\"path\":[\"item\",\"external_ids\",\"isrc\"]},\"_p_item.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"item external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"external_urls\",\"spotify\"]},\"_p_item.href\":{\"ret_value\":\"text\",\"caption\":\"item href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"href\"]},\"_p_item.id\":{\"ret_value\":\"text\",\"caption\":\"item id\",\"sample_value\":\"0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"id\"]},\"_p_item.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"item is_local\",\"sample_value\":false,\"path\":[\"item\",\"is_local\"]},\"_p_item.name\":{\"ret_value\":\"text\",\"caption\":\"item name\",\"sample_value\":\"Lo Vas A Olvidar (with ROSALÍA)\",\"path\":[\"item\",\"name\"]},\"_p_item.popularity\":{\"ret_value\":\"number\",\"caption\":\"item popularity\",\"sample_value\":79,\"path\":[\"item\",\"popularity\"]},\"_p_item.preview_url\":{\"ret_value\":\"text\",\"caption\":\"item preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/414ee1d2591f99872a5acb36065c14e05a3b870e?cid=9a524b121201476d9fcc60ba8838dc09\",\"path\":[\"item\",\"preview_url\"]},\"_p_item.track_number\":{\"ret_value\":\"number\",\"caption\":\"item track_number\",\"sample_value\":1,\"path\":[\"item\",\"track_number\"]},\"_p_item.type\":{\"ret_value\":\"text\",\"caption\":\"item type\",\"sample_value\":\"track\",\"path\":[\"item\",\"type\"]},\"_p_item.uri\":{\"ret_value\":\"text\",\"caption\":\"item uri\",\"sample_value\":\"spotify:track:0psS4i5YooJrXfDnGvWRLi\",\"path\":[\"item\",\"uri\"]},\"_p_currently_playing_type\":{\"ret_value\":\"text\",\"caption\":\"currently_playing_type\",\"sample_value\":\"track\",\"path\":[\"currently_playing_type\"]},\"_p_actions.disallows.resuming\":{\"ret_value\":\"boolean\",\"caption\":\"actions disallows resuming\",\"sample_value\":true,\"path\":[\"actions\",\"disallows\",\"resuming\"]},\"_p_actions.disallows.skipping_prev\":{\"ret_value\":\"boolean\",\"caption\":\"actions disallows skipping_prev\",\"sample_value\":true,\"path\":[\"actions\",\"disallows\",\"skipping_prev\"]},\"_p_is_playing\":{\"ret_value\":\"boolean\",\"caption\":\"is_playing\",\"sample_value\":true,\"path\":[\"is_playing\"]}}},\"plugin_api.ACJ.item.album.artists\":{\"caption\":\"Current Playback item album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Billie Eilish\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"uri\"]}}},\"plugin_api.ACJ.item.album.images\":{\"caption\":\"Current Playback item album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b273c64ed7bab63186d7fca3012f\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.ACJ.item.artists\":{\"caption\":\"Current Playback item artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Billie Eilish\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/player"
+        },
+        "ACk": {
+            "0": "A",
+            "1": "C",
+            "2": "j",
+            "body": "",
+            "data_type": "empty",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-start-a-users-playback",
+            "initialized": true,
+            "method": "put",
+            "name": "Start / Resume Player",
+            "no_types": true,
+            "params": {
+                "AAd": {
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 14,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ACj",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ACj\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/play"
+        },
+        "ADh": {
+            "0": "A",
+            "1": "D",
+            "2": "g",
+            "body": "{\n  \"uris\": [\"<uri>\"],\n  \"position_ms\": <position>\n}",
+            "body_params": {
+                "ADG": {
+                    "doc": "Position to start (ms)",
+                    "key": "position",
+                    "private": true,
+                    "value": "0"
+                },
+                "ADi": {
+                    "doc": "Ex:\nspotify:track:3DBYiPU19pqr7KLSRjdwG0",
+                    "key": "uri",
+                    "private": true,
+                    "value": "spotify:track:3DBYiPU19pqr7KLSRjdwG0"
+                }
+            },
+            "data_type": "empty",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-start-a-users-playback",
+            "initialized": true,
+            "method": "put",
+            "name": "Start Playing (track)",
+            "no_types": true,
+            "publish_as": "action",
+            "rank": 17,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ADg",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ADg\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/play"
+        },
+        "ADk": {
+            "0": "A",
+            "1": "D",
+            "2": "j",
+            "body": "",
+            "data_type": "empty",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-start-a-users-playback",
+            "initialized": true,
+            "method": "post",
+            "name": "Skip User’s Playback To Next Track",
+            "no_types": true,
+            "params": {
+                "ADl": {
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 18,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ADg",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ADg\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/next"
+        },
+        "ADn": {
+            "0": "A",
+            "1": "D",
+            "2": "m",
+            "body": "",
+            "data_type": "empty",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#endpoint-start-a-users-playback",
+            "initialized": true,
+            "method": "post",
+            "name": "Skip User’s Playback To Previous Track",
+            "no_types": true,
+            "params": {
+                "ADl": {
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 19,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ADg",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ADg\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/previous"
+        },
+        "ADp": {
+            "0": "A",
+            "1": "D",
+            "2": "o",
+            "body": "",
+            "data_type": "empty",
+            "doc_link": "",
+            "initialized": true,
+            "method": "put",
+            "name": "Seek To Position In Currently Playing Track",
+            "no_types": true,
+            "params": {
+                "ADl": {
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ADq": {
+                    "doc": "Position (in ms)",
+                    "key": "position_ms",
+                    "optional": false,
+                    "private": true,
+                    "value": "0"
+                }
+            },
+            "publish_as": "action",
+            "rank": 20,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ADg",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ADg\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/seek"
+        },
+        "ADs": {
+            "0": "A",
+            "1": "D",
+            "2": "r",
+            "body": "",
+            "data_type": "empty",
+            "doc_link": "",
+            "initialized": true,
+            "method": "put",
+            "name": "Set Repeat Mode On User’s Playback",
+            "no_types": true,
+            "params": {
+                "ADl": {
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ADq": {
+                    "doc": "track, context or off.\ntrack will repeat the current track.\ncontext will repeat the current context.\noff will turn repeat off.",
+                    "key": "state",
+                    "optional": false,
+                    "private": true,
+                    "value": "off"
+                }
+            },
+            "publish_as": "action",
+            "rank": 21,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ADg",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ADg\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/repeat"
+        },
+        "ADu": {
+            "0": "A",
+            "1": "D",
+            "2": "t",
+            "body": "",
+            "data_type": "empty",
+            "doc_link": "",
+            "initialized": true,
+            "method": "put",
+            "name": "Toggle Shuffle For User’s Playback",
+            "no_types": true,
+            "params": {
+                "ADl": {
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ADq": {
+                    "doc": "true : Shuffle user’s playback.\nfalse : Do not shuffle user’s playback.",
+                    "key": "state",
+                    "optional": false,
+                    "private": true,
+                    "value": "false"
+                }
+            },
+            "publish_as": "action",
+            "rank": 22,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ADg",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ADg\":{\"caption\":\"Start/ Resume Playing\",\"fields\":{}}}",
+            "url": "https://api.spotify.com/v1/me/player/shuffle"
+        },
+        "ADw": {
+            "0": "A",
+            "1": "D",
+            "2": "v",
+            "body_type": "json",
+            "doc_link": "",
+            "initialized": true,
+            "method": "get",
+            "name": "Get Current User's Recently Played Tracks",
+            "params": {
+                "AAj": {
+                    "doc": "The maximum number of playlists to return. Default: 20. Minimum: 1. Maximum: 50",
+                    "key": "limit",
+                    "private": true,
+                    "value": "20"
+                },
+                "ADy": {
+                    "doc": "Returns all items before (but not including) this cursor position. If before is specified, after must not be specified.",
+                    "key": "before",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ADz": {
+                    "doc": "Returns all items after (but not including) this cursor position. If after is specified, before must not be specified.",
+                    "key": "after",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "data",
+            "rank": 23,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.ADw",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ADw\":{\"caption\":\"Get Current User's Recently Played Track\",\"fields\":{\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ADw.items\",\"caption\":\"items\",\"path\":[\"items\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"sample_value\":\"https://api.spotify.com/v1/me/player/recently-played?after=1616913155460&limit=20\",\"path\":[\"next\"]},\"_p_cursors.after\":{\"ret_value\":\"text\",\"caption\":\"cursors after\",\"sample_value\":\"1616913155460\",\"path\":[\"cursors\",\"after\"]},\"_p_cursors.before\":{\"ret_value\":\"text\",\"caption\":\"cursors before\",\"sample_value\":\"1616908894512\",\"path\":[\"cursors\",\"before\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"sample_value\":20,\"path\":[\"limit\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/me/player/recently-played?after=1616917018&limit=20\",\"path\":[\"href\"]}}},\"plugin_api.ADw.items\":{\"caption\":\"Get Current User's Recently Played Tracks item\",\"fields\":{\"_p_track.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"track album album_type\",\"sample_value\":\"album\",\"path\":[\"track\",\"album\",\"album_type\"]},\"_p_track.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ADw.track.album.artists\",\"caption\":\"track album artists\",\"path\":[\"track\",\"album\",\"artists\"]},\"_p_track.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track album available_markets\",\"sample_value\":\"AD\",\"path\":[\"track\",\"album\",\"available_markets\"]},\"_p_track.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"external_urls\",\"spotify\"]},\"_p_track.album.href\":{\"ret_value\":\"text\",\"caption\":\"track album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"href\"]},\"_p_track.album.id\":{\"ret_value\":\"text\",\"caption\":\"track album id\",\"sample_value\":\"2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"id\"]},\"_p_track.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ADw.track.album.images\",\"caption\":\"track album images\",\"path\":[\"track\",\"album\",\"images\"]},\"_p_track.album.name\":{\"ret_value\":\"text\",\"caption\":\"track album name\",\"sample_value\":\"Watch\",\"path\":[\"track\",\"album\",\"name\"]},\"_p_track.album.release_date\":{\"ret_value\":\"text\",\"caption\":\"track album release_date\",\"sample_value\":\"1978-02-24\",\"path\":[\"track\",\"album\",\"release_date\"]},\"_p_track.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"track album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"track\",\"album\",\"release_date_precision\"]},\"_p_track.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"track album total_tracks\",\"sample_value\":11,\"path\":[\"track\",\"album\",\"total_tracks\"]},\"_p_track.album.type\":{\"ret_value\":\"text\",\"caption\":\"track album type\",\"sample_value\":\"album\",\"path\":[\"track\",\"album\",\"type\"]},\"_p_track.album.uri\":{\"ret_value\":\"text\",\"caption\":\"track album uri\",\"sample_value\":\"spotify:album:2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"uri\"]},\"_p_track.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.ADw.track.artists\",\"caption\":\"track artists\",\"path\":[\"track\",\"artists\"]},\"_p_track.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track available_markets\",\"sample_value\":\"AD\",\"path\":[\"track\",\"available_markets\"]},\"_p_track.disc_number\":{\"ret_value\":\"number\",\"caption\":\"track disc_number\",\"sample_value\":1,\"path\":[\"track\",\"disc_number\"]},\"_p_track.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"track duration_ms\",\"sample_value\":218333,\"path\":[\"track\",\"duration_ms\"]},\"_p_track.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"track explicit\",\"sample_value\":false,\"path\":[\"track\",\"explicit\"]},\"_p_track.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"track external_ids isrc\",\"sample_value\":\"GBBXM7810008\",\"path\":[\"track\",\"external_ids\",\"isrc\"]},\"_p_track.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"external_urls\",\"spotify\"]},\"_p_track.href\":{\"ret_value\":\"text\",\"caption\":\"track href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"href\"]},\"_p_track.id\":{\"ret_value\":\"text\",\"caption\":\"track id\",\"sample_value\":\"0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"id\"]},\"_p_track.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"track is_local\",\"sample_value\":false,\"path\":[\"track\",\"is_local\"]},\"_p_track.name\":{\"ret_value\":\"text\",\"caption\":\"track name\",\"sample_value\":\"Davy's on the Road Again - Single Edit\",\"path\":[\"track\",\"name\"]},\"_p_track.popularity\":{\"ret_value\":\"number\",\"caption\":\"track popularity\",\"sample_value\":35,\"path\":[\"track\",\"popularity\"]},\"_p_track.preview_url\":{\"ret_value\":\"text\",\"caption\":\"track preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/cdb3cc1407f028aebb9107aeee66090d2368fe71?cid=9a524b121201476d9fcc60ba8838dc09\",\"path\":[\"track\",\"preview_url\"]},\"_p_track.track_number\":{\"ret_value\":\"number\",\"caption\":\"track track_number\",\"sample_value\":8,\"path\":[\"track\",\"track_number\"]},\"_p_track.type\":{\"ret_value\":\"text\",\"caption\":\"track type\",\"sample_value\":\"track\",\"path\":[\"track\",\"type\"]},\"_p_track.uri\":{\"ret_value\":\"text\",\"caption\":\"track uri\",\"sample_value\":\"spotify:track:0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"uri\"]},\"_p_played_at\":{\"ret_value\":\"text\",\"caption\":\"played_at\",\"sample_value\":\"2021-03-28T06:32:35.460Z\",\"path\":[\"played_at\"]},\"_p_context.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"context external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/37i9dQZF1E8IAE8nuav3jT\",\"path\":[\"context\",\"external_urls\",\"spotify\"]},\"_p_context.href\":{\"ret_value\":\"text\",\"caption\":\"context href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/37i9dQZF1E8IAE8nuav3jT\",\"path\":[\"context\",\"href\"]},\"_p_context.type\":{\"ret_value\":\"text\",\"caption\":\"context type\",\"sample_value\":\"playlist\",\"path\":[\"context\",\"type\"]},\"_p_context.uri\":{\"ret_value\":\"text\",\"caption\":\"context uri\",\"sample_value\":\"spotify:playlist:37i9dQZF1E8IAE8nuav3jT\",\"path\":[\"context\",\"uri\"]}}},\"plugin_api.ADw.track.album.artists\":{\"caption\":\"Get Current User's Recently Played Tracks track album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Manfred Mann's Earth Band\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"uri\"]}}},\"plugin_api.ADw.track.album.images\":{\"caption\":\"Get Current User's Recently Played Tracks track album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b2735b92bb20bbbbb4d2b3bca669\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.ADw.track.artists\":{\"caption\":\"Get Current User's Recently Played Tracks track artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Manfred Mann's Earth Band\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/player/recently-played"
+        },
+        "AEB": {
+            "0": "A",
+            "1": "E",
+            "2": "A",
+            "body_type": "json",
+            "data_type": "empty",
+            "doc_link": "",
+            "initialized": true,
+            "method": "post",
+            "name": "Add a track to queue",
+            "no_types": true,
+            "params": {
+                "AAj": {
+                    "doc": "",
+                    "key": "device_id",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ADz": {
+                    "doc": "The uri of the item to add to the queue. Must be a track or an episode uri.",
+                    "key": "uri",
+                    "optional": true,
+                    "private": true,
+                    "querystring": true,
+                    "value": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL"
+                }
+            },
+            "publish_as": "action",
+            "rank": 24,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AEA",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AEA\":{\"caption\":\"Get Current User's Recently Played Track\",\"fields\":{\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEA.items\",\"caption\":\"items\",\"path\":[\"items\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"sample_value\":\"https://api.spotify.com/v1/me/player/recently-played?after=1616913155460&limit=20\",\"path\":[\"next\"]},\"_p_cursors.after\":{\"ret_value\":\"text\",\"caption\":\"cursors after\",\"sample_value\":\"1616913155460\",\"path\":[\"cursors\",\"after\"]},\"_p_cursors.before\":{\"ret_value\":\"text\",\"caption\":\"cursors before\",\"sample_value\":\"1616908894512\",\"path\":[\"cursors\",\"before\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"sample_value\":20,\"path\":[\"limit\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/me/player/recently-played?after=1616917018&limit=20\",\"path\":[\"href\"]}}},\"plugin_api.AEA.items\":{\"caption\":\"Get Current User's Recently Played Tracks item\",\"fields\":{\"_p_track.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"track album album_type\",\"sample_value\":\"album\",\"path\":[\"track\",\"album\",\"album_type\"]},\"_p_track.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEA.track.album.artists\",\"caption\":\"track album artists\",\"path\":[\"track\",\"album\",\"artists\"]},\"_p_track.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track album available_markets\",\"sample_value\":\"AD\",\"path\":[\"track\",\"album\",\"available_markets\"]},\"_p_track.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"external_urls\",\"spotify\"]},\"_p_track.album.href\":{\"ret_value\":\"text\",\"caption\":\"track album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"href\"]},\"_p_track.album.id\":{\"ret_value\":\"text\",\"caption\":\"track album id\",\"sample_value\":\"2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"id\"]},\"_p_track.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEA.track.album.images\",\"caption\":\"track album images\",\"path\":[\"track\",\"album\",\"images\"]},\"_p_track.album.name\":{\"ret_value\":\"text\",\"caption\":\"track album name\",\"sample_value\":\"Watch\",\"path\":[\"track\",\"album\",\"name\"]},\"_p_track.album.release_date\":{\"ret_value\":\"text\",\"caption\":\"track album release_date\",\"sample_value\":\"1978-02-24\",\"path\":[\"track\",\"album\",\"release_date\"]},\"_p_track.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"track album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"track\",\"album\",\"release_date_precision\"]},\"_p_track.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"track album total_tracks\",\"sample_value\":11,\"path\":[\"track\",\"album\",\"total_tracks\"]},\"_p_track.album.type\":{\"ret_value\":\"text\",\"caption\":\"track album type\",\"sample_value\":\"album\",\"path\":[\"track\",\"album\",\"type\"]},\"_p_track.album.uri\":{\"ret_value\":\"text\",\"caption\":\"track album uri\",\"sample_value\":\"spotify:album:2Cg9BAwbhnHxLsHj5tv5uS\",\"path\":[\"track\",\"album\",\"uri\"]},\"_p_track.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEA.track.artists\",\"caption\":\"track artists\",\"path\":[\"track\",\"artists\"]},\"_p_track.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track available_markets\",\"sample_value\":\"AD\",\"path\":[\"track\",\"available_markets\"]},\"_p_track.disc_number\":{\"ret_value\":\"number\",\"caption\":\"track disc_number\",\"sample_value\":1,\"path\":[\"track\",\"disc_number\"]},\"_p_track.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"track duration_ms\",\"sample_value\":218333,\"path\":[\"track\",\"duration_ms\"]},\"_p_track.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"track explicit\",\"sample_value\":false,\"path\":[\"track\",\"explicit\"]},\"_p_track.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"track external_ids isrc\",\"sample_value\":\"GBBXM7810008\",\"path\":[\"track\",\"external_ids\",\"isrc\"]},\"_p_track.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"external_urls\",\"spotify\"]},\"_p_track.href\":{\"ret_value\":\"text\",\"caption\":\"track href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"href\"]},\"_p_track.id\":{\"ret_value\":\"text\",\"caption\":\"track id\",\"sample_value\":\"0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"id\"]},\"_p_track.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"track is_local\",\"sample_value\":false,\"path\":[\"track\",\"is_local\"]},\"_p_track.name\":{\"ret_value\":\"text\",\"caption\":\"track name\",\"sample_value\":\"Davy's on the Road Again - Single Edit\",\"path\":[\"track\",\"name\"]},\"_p_track.popularity\":{\"ret_value\":\"number\",\"caption\":\"track popularity\",\"sample_value\":35,\"path\":[\"track\",\"popularity\"]},\"_p_track.preview_url\":{\"ret_value\":\"text\",\"caption\":\"track preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/cdb3cc1407f028aebb9107aeee66090d2368fe71?cid=9a524b121201476d9fcc60ba8838dc09\",\"path\":[\"track\",\"preview_url\"]},\"_p_track.track_number\":{\"ret_value\":\"number\",\"caption\":\"track track_number\",\"sample_value\":8,\"path\":[\"track\",\"track_number\"]},\"_p_track.type\":{\"ret_value\":\"text\",\"caption\":\"track type\",\"sample_value\":\"track\",\"path\":[\"track\",\"type\"]},\"_p_track.uri\":{\"ret_value\":\"text\",\"caption\":\"track uri\",\"sample_value\":\"spotify:track:0X7DKpCfBk0n8YfjOXA1Md\",\"path\":[\"track\",\"uri\"]},\"_p_played_at\":{\"ret_value\":\"text\",\"caption\":\"played_at\",\"sample_value\":\"2021-03-28T06:32:35.460Z\",\"path\":[\"played_at\"]},\"_p_context.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"context external_urls spotify\",\"sample_value\":\"https://open.spotify.com/playlist/37i9dQZF1E8IAE8nuav3jT\",\"path\":[\"context\",\"external_urls\",\"spotify\"]},\"_p_context.href\":{\"ret_value\":\"text\",\"caption\":\"context href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/37i9dQZF1E8IAE8nuav3jT\",\"path\":[\"context\",\"href\"]},\"_p_context.type\":{\"ret_value\":\"text\",\"caption\":\"context type\",\"sample_value\":\"playlist\",\"path\":[\"context\",\"type\"]},\"_p_context.uri\":{\"ret_value\":\"text\",\"caption\":\"context uri\",\"sample_value\":\"spotify:playlist:37i9dQZF1E8IAE8nuav3jT\",\"path\":[\"context\",\"uri\"]}}},\"plugin_api.AEA.track.album.artists\":{\"caption\":\"Get Current User's Recently Played Tracks track album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Manfred Mann's Earth Band\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"uri\"]}}},\"plugin_api.AEA.track.album.images\":{\"caption\":\"Get Current User's Recently Played Tracks track album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b2735b92bb20bbbbb4d2b3bca669\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.AEA.track.artists\":{\"caption\":\"Get Current User's Recently Played Tracks track artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Manfred Mann's Earth Band\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:2utNxkLhreF1oIfO8kQT3q\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/me/player/queue"
+        },
+        "AED": {
+            "0": "A",
+            "1": "E",
+            "2": "C",
+            "doc_link": "https://developer.spotify.com/documentation/web-api/reference-beta/#category-tracks",
+            "initialized": true,
+            "method": "get",
+            "name": "Get Artist",
+            "publish_as": "data",
+            "rank": 3,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AED",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AED\":{\"caption\":\"Get Artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/2feDdbD5araYcm6JhFHHw7\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_followers.href\":{\"ret_value\":\"text\",\"caption\":\"followers href\",\"sample_value\":null,\"path\":[\"followers\",\"href\"]},\"_p_followers.total\":{\"ret_value\":\"number\",\"caption\":\"followers total\",\"sample_value\":1561068,\"path\":[\"followers\",\"total\"]},\"_p_genres\":{\"ret_value\":\"list.text\",\"caption\":\"genres\",\"sample_value\":\"dance pop\",\"path\":[\"genres\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/2feDdbD5araYcm6JhFHHw7\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"2feDdbD5araYcm6JhFHHw7\",\"path\":[\"id\"]},\"_p_images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AED.images\",\"caption\":\"images\",\"path\":[\"images\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Labrinth\",\"path\":[\"name\"]},\"_p_popularity\":{\"ret_value\":\"number\",\"caption\":\"popularity\",\"sample_value\":83,\"path\":[\"popularity\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:2feDdbD5araYcm6JhFHHw7\",\"path\":[\"uri\"]}}},\"plugin_api.AED.images\":{\"caption\":\"Get Artist image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/d9a7e54f8df26abde79fd1be03f40d4e8569f590\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}}}",
+            "url": "https://api.spotify.com/v1/artists/[id]",
+            "url_params": {
+                "AAK": {
+                    "key": "id",
+                    "private": true,
+                    "value": "2feDdbD5araYcm6JhFHHw7"
+                }
+            }
+        },
+        "AEF": {
+            "0": "A",
+            "1": "E",
+            "2": "E",
+            "doc_link": "https://developer.spotify.com/console/get-playlist-tracks/",
+            "initialized": true,
+            "method": "get",
+            "name": "Get playlist's tracks",
+            "params": {
+                "AAm": {
+                    "doc": "",
+                    "key": "fields",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "data",
+            "rank": 27,
+            "ret_value": "api.1593153772464x855831961843793900.plugin_api.AEF",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AEF\":{\"caption\":\"Get playlist's track\",\"fields\":{\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/playlists/2YbG96qplg6UR0RvewKDIB/tracks?offset=0&limit=100\",\"path\":[\"href\"]},\"_p_items\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEF.items\",\"caption\":\"items\",\"path\":[\"items\"]},\"_p_limit\":{\"ret_value\":\"number\",\"caption\":\"limit\",\"sample_value\":100,\"path\":[\"limit\"]},\"_p_next\":{\"ret_value\":\"text\",\"caption\":\"next\",\"sample_value\":null,\"path\":[\"next\"]},\"_p_offset\":{\"ret_value\":\"number\",\"caption\":\"offset\",\"sample_value\":0,\"path\":[\"offset\"]},\"_p_previous\":{\"ret_value\":\"text\",\"caption\":\"previous\",\"sample_value\":null,\"path\":[\"previous\"]},\"_p_total\":{\"ret_value\":\"number\",\"caption\":\"total\",\"sample_value\":21,\"path\":[\"total\"]}}},\"plugin_api.AEF.items\":{\"caption\":\"Get playlist's tracks item\",\"fields\":{\"_p_added_at\":{\"ret_value\":\"date\",\"caption\":\"added_at\",\"sample_value\":\"2016-09-27T12:32:11Z\",\"path\":[\"added_at\"]},\"_p_added_by.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"added_by external_urls spotify\",\"sample_value\":\"https://open.spotify.com/user/moviemusicclub\",\"path\":[\"added_by\",\"external_urls\",\"spotify\"]},\"_p_added_by.href\":{\"ret_value\":\"text\",\"caption\":\"added_by href\",\"sample_value\":\"https://api.spotify.com/v1/users/moviemusicclub\",\"path\":[\"added_by\",\"href\"]},\"_p_added_by.id\":{\"ret_value\":\"text\",\"caption\":\"added_by id\",\"sample_value\":\"moviemusicclub\",\"path\":[\"added_by\",\"id\"]},\"_p_added_by.type\":{\"ret_value\":\"text\",\"caption\":\"added_by type\",\"sample_value\":\"user\",\"path\":[\"added_by\",\"type\"]},\"_p_added_by.uri\":{\"ret_value\":\"text\",\"caption\":\"added_by uri\",\"sample_value\":\"spotify:user:moviemusicclub\",\"path\":[\"added_by\",\"uri\"]},\"_p_is_local\":{\"ret_value\":\"boolean\",\"caption\":\"is_local\",\"sample_value\":false,\"path\":[\"is_local\"]},\"_p_primary_color\":{\"ret_value\":\"text\",\"caption\":\"primary_color\",\"sample_value\":null,\"path\":[\"primary_color\"]},\"_p_track.preview_url\":{\"ret_value\":\"text\",\"caption\":\"track preview_url\",\"sample_value\":\"https://p.scdn.co/mp3-preview/5efc06a4013465b9529be331914e3dd21ede2f78?cid=e74145fbe41b4512a4f70ef65fb93d31\",\"path\":[\"track\",\"preview_url\"]},\"_p_track.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track available_markets\",\"sample_value\":\"AR\",\"path\":[\"track\",\"available_markets\"]},\"_p_track.explicit\":{\"ret_value\":\"boolean\",\"caption\":\"track explicit\",\"sample_value\":false,\"path\":[\"track\",\"explicit\"]},\"_p_track.type\":{\"ret_value\":\"text\",\"caption\":\"track type\",\"sample_value\":\"track\",\"path\":[\"track\",\"type\"]},\"_p_track.episode\":{\"ret_value\":\"boolean\",\"caption\":\"track episode\",\"sample_value\":false,\"path\":[\"track\",\"episode\"]},\"_p_track.track\":{\"ret_value\":\"boolean\",\"caption\":\"track track\",\"sample_value\":true,\"path\":[\"track\",\"track\"]},\"_p_track.album.available_markets\":{\"ret_value\":\"list.text\",\"caption\":\"track album available_markets\",\"sample_value\":\"AR\",\"path\":[\"track\",\"album\",\"available_markets\"]},\"_p_track.album.type\":{\"ret_value\":\"text\",\"caption\":\"track album type\",\"sample_value\":\"album\",\"path\":[\"track\",\"album\",\"type\"]},\"_p_track.album.album_type\":{\"ret_value\":\"text\",\"caption\":\"track album album_type\",\"sample_value\":\"album\",\"path\":[\"track\",\"album\",\"album_type\"]},\"_p_track.album.href\":{\"ret_value\":\"text\",\"caption\":\"track album href\",\"sample_value\":\"https://api.spotify.com/v1/albums/5TCYqCglTyAOwTGbF2LkPA\",\"path\":[\"track\",\"album\",\"href\"]},\"_p_track.album.id\":{\"ret_value\":\"text\",\"caption\":\"track album id\",\"sample_value\":\"5TCYqCglTyAOwTGbF2LkPA\",\"path\":[\"track\",\"album\",\"id\"]},\"_p_track.album.images\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEF.track.album.images\",\"caption\":\"track album images\",\"path\":[\"track\",\"album\",\"images\"]},\"_p_track.album.name\":{\"ret_value\":\"text\",\"caption\":\"track album name\",\"sample_value\":\"Ephemeral as we speak\",\"path\":[\"track\",\"album\",\"name\"]},\"_p_track.album.release_date\":{\"ret_value\":\"date\",\"caption\":\"track album release_date\",\"sample_value\":\"2007-03-13\",\"path\":[\"track\",\"album\",\"release_date\"]},\"_p_track.album.release_date_precision\":{\"ret_value\":\"text\",\"caption\":\"track album release_date_precision\",\"sample_value\":\"day\",\"path\":[\"track\",\"album\",\"release_date_precision\"]},\"_p_track.album.uri\":{\"ret_value\":\"text\",\"caption\":\"track album uri\",\"sample_value\":\"spotify:album:5TCYqCglTyAOwTGbF2LkPA\",\"path\":[\"track\",\"album\",\"uri\"]},\"_p_track.album.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEF.track.album.artists\",\"caption\":\"track album artists\",\"path\":[\"track\",\"album\",\"artists\"]},\"_p_track.album.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track album external_urls spotify\",\"sample_value\":\"https://open.spotify.com/album/5TCYqCglTyAOwTGbF2LkPA\",\"path\":[\"track\",\"album\",\"external_urls\",\"spotify\"]},\"_p_track.album.total_tracks\":{\"ret_value\":\"number\",\"caption\":\"track album total_tracks\",\"sample_value\":10,\"path\":[\"track\",\"album\",\"total_tracks\"]},\"_p_track.artists\":{\"ret_value\":\"list.api.1593153772464x855831961843793900.plugin_api.AEF.track.artists\",\"caption\":\"track artists\",\"path\":[\"track\",\"artists\"]},\"_p_track.disc_number\":{\"ret_value\":\"number\",\"caption\":\"track disc_number\",\"sample_value\":1,\"path\":[\"track\",\"disc_number\"]},\"_p_track.track_number\":{\"ret_value\":\"number\",\"caption\":\"track track_number\",\"sample_value\":1,\"path\":[\"track\",\"track_number\"]},\"_p_track.duration_ms\":{\"ret_value\":\"number\",\"caption\":\"track duration_ms\",\"sample_value\":177213,\"path\":[\"track\",\"duration_ms\"]},\"_p_track.external_ids.isrc\":{\"ret_value\":\"text\",\"caption\":\"track external_ids isrc\",\"sample_value\":\"USA560636122\",\"path\":[\"track\",\"external_ids\",\"isrc\"]},\"_p_track.external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"track external_urls spotify\",\"sample_value\":\"https://open.spotify.com/track/707PpRk1onx0JpS4ELgsKr\",\"path\":[\"track\",\"external_urls\",\"spotify\"]},\"_p_track.href\":{\"ret_value\":\"text\",\"caption\":\"track href\",\"sample_value\":\"https://api.spotify.com/v1/tracks/707PpRk1onx0JpS4ELgsKr\",\"path\":[\"track\",\"href\"]},\"_p_track.id\":{\"ret_value\":\"text\",\"caption\":\"track id\",\"sample_value\":\"707PpRk1onx0JpS4ELgsKr\",\"path\":[\"track\",\"id\"]},\"_p_track.name\":{\"ret_value\":\"text\",\"caption\":\"track name\",\"sample_value\":\"Swarm\",\"path\":[\"track\",\"name\"]},\"_p_track.popularity\":{\"ret_value\":\"number\",\"caption\":\"track popularity\",\"sample_value\":8,\"path\":[\"track\",\"popularity\"]},\"_p_track.uri\":{\"ret_value\":\"text\",\"caption\":\"track uri\",\"sample_value\":\"spotify:track:707PpRk1onx0JpS4ELgsKr\",\"path\":[\"track\",\"uri\"]},\"_p_track.is_local\":{\"ret_value\":\"boolean\",\"caption\":\"track is_local\",\"sample_value\":false,\"path\":[\"track\",\"is_local\"]},\"_p_video_thumbnail.url\":{\"ret_value\":\"text\",\"caption\":\"video_thumbnail url\",\"sample_value\":null,\"path\":[\"video_thumbnail\",\"url\"]}}},\"plugin_api.AEF.track.album.images\":{\"caption\":\"Get playlist's tracks track album image\",\"fields\":{\"_p_height\":{\"ret_value\":\"number\",\"caption\":\"height\",\"sample_value\":640,\"path\":[\"height\"]},\"_p_url\":{\"ret_value\":\"image\",\"caption\":\"url\",\"sample_value\":\"https://i.scdn.co/image/ab67616d0000b273e78594016f2904c49efbf759\",\"path\":[\"url\"]},\"_p_width\":{\"ret_value\":\"number\",\"caption\":\"width\",\"sample_value\":640,\"path\":[\"width\"]}}},\"plugin_api.AEF.track.album.artists\":{\"caption\":\"Get playlist's tracks track album artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Surface of Atlantic\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"uri\"]}}},\"plugin_api.AEF.track.artists\":{\"caption\":\"Get playlist's tracks track artist\",\"fields\":{\"_p_external_urls.spotify\":{\"ret_value\":\"text\",\"caption\":\"external_urls spotify\",\"sample_value\":\"https://open.spotify.com/artist/42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"external_urls\",\"spotify\"]},\"_p_href\":{\"ret_value\":\"text\",\"caption\":\"href\",\"sample_value\":\"https://api.spotify.com/v1/artists/42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"href\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Surface of Atlantic\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"artist\",\"path\":[\"type\"]},\"_p_uri\":{\"ret_value\":\"text\",\"caption\":\"uri\",\"sample_value\":\"spotify:artist:42yeiidwOX1Vn6NyZYtwCy\",\"path\":[\"uri\"]}}}}",
+            "url": "https://api.spotify.com/v1/playlists/[playlist_id]/tracks",
+            "url_params": {
+                "AAl": {
+                    "key": "playlist_id",
+                    "private": true,
+                    "value": "2YbG96qplg6UR0RvewKDIB"
+                }
+            }
+        }
+    },
+    "generate_token_from_code_uri": "https://accounts.spotify.com/api/token",
+    "header_key": "Authorization: Bearer",
+    "human": "Spotify Complete",
+    "oauth_user_data_call": "https://api.spotify.com/v1/me",
+    "scope": "user-read-private user-read-email user-read-playback-state user-read-recently-played user-top-read user-read-currently-playing user-modify-playback-state streaming user-library-read playlist-modify-public playlist-modify-private playlist-read-private playlist-read-collaborative",
+    "token_param_name": "Authorization: Bearer"
+}

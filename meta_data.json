@@ -1,0 +1,14 @@
+{
+    "categories": {
+        "0": "social network",
+        "1": "media"
+    },
+    "demo_page": "https://ottho.notion.site/Spotify-Complete-d51554b2828440d4bb4dc37ad4a92f1b",
+    "description": "The plugin let you retrieve data from Steam with more than 20+ pre-configured API calls.\n\nThe plugin also include extra calls and features from us.\n\n✔️ FEATURES \n\n➡️ More than 45+ configured calls\n➡️ Complete documentation links\n\nTo receive special offers and important updates please visit: https://zeroqo.de/updates\n\n🔔 Get our 15 Top Plugins Bundle with 15 most popular plugins for only 20$/month.\nPlugins included in the Bundle:\n\n- Bubble Page to PDF converter\n- Stripe Marketplace Express\n- Air Calendar (Full Calendar 5.9.0)\n- AWS File uploader - Any size\n- Advanced Rich Text Editor\n- Mapbox Map\n- Phone Input Number with Formatting\n- Advanced Multi Uploader\n- Video Player\n- Dynamic Height & Width of Elements\n- Audio Recorder\n- Repeating Group to CSV\n- Print Pro\n- Advanced Audio Player\n- Easy File Downloader\n\nGet it here: https://zeroqode.com/bundle\n\nDEMO & DOCUMENTATION\nhttps://zeroqode.com/plugin/spotify-complete-music-plugin-for-bubble-1709879878304x571860425771589570\n\nNEED HELP BUILDING A CUSTOM APPLICATION?\nhttps://dev.zeroqode.com\n\nSUPERCHARGE YOUR APP WITH ZEROQODE PLUGINS\nhttps://zeroqode.com/plugins\n\nQUESTIONS OR NEED HELP?\nhttps://forum.zeroqode.com",
+    "image": "//meta-q.cdn.bubble.io/f1714118210290x345199793344216400/images-1.png",
+    "license": "open_source",
+    "link": "https://zeroqode.com/plugins",
+    "name": "Spotify Complete #music",
+    "plugin_instructions": "1. Register your application at https://developer.spotify.com/my-applications\n\n2. Once registered, you'll be given a Client ID (App ID) and a Client Secret (App Secret), which you will enter into the plugin settings.\n\n3. Set your Oauth Redirect\n\n\n-----\nRequired scopes\n\nuser-read-private\nuser-read-email\nuser-read-playback-state\nuser-read-recently-played\nuser-top-read\nuser-read-currently-playing\nuser-modify-playback-state\nstreaming user-library-read\nplaylist-modify-public\nplaylist-modify-private",
+    "sa_node_version": 18
+}
